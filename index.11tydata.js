@@ -28,8 +28,8 @@ function authorList(authors) {
 }
 
 module.exports = {
-  name: "Tej Chajed",
-  email: "tchajed@mit.edu",
+  name: "Zhutian Yang",
+  email: "ztyang@mit.edu",
   publications: [
     {
       title: "GoJournal: a verified, concurrent, crash-safe journaling system",
