@@ -83,7 +83,7 @@ page, click on Pages in the sidebar, and enable Pages. Deploy from the
 your site to this branch every time you push to the repository.
 
 By default, your site will be accessible from a URL like
-https://tchajed.github.io/personal-website-demo: it will use your username and
+https://zt-yang.github.io/zhutian-yang-website: it will use your username and
 whatever you named the repo. However, you can use just https://tchajed.github.io
 (again, with your username) by naming your repo tchajed.github.io.
 
