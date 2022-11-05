@@ -15,7 +15,7 @@
             <h1 class="name center">{{name}}</h1>
             <div class="email center">{{email}}</div>
             <p>Hello! My name is Zhutian and I'm a second-year PhD student at MIT
-                working on learning to speed up task and motion planning so that we can have mobile robots helping with household chores.</p>
+                working on machine learning for speed up task and motion planning so that we can have mobile robots helping with household chores.</p>
           </td>
           <td class="photo">
             <img src="https://raw.githubusercontent.com/zt-yang/zhutian-yang-website/main/img/zhutianyang.jpg?token=GHSAT0AAAAAABZLZPSEQFWPM4YB67NHZED4Y3CZFKQ" width="100%" height="100%">
@@ -23,8 +23,17 @@
         </tr>
       </tbody>
     </table>
-    <!-- <h2>Research</h2>
-    I make correct systems software.
+
+
+    <h2>Research</h2>
+    Household robots planning long-horizon behavior, such as heating up takeouts and cleaning the kitchen counter, must be able to plan quickly and execute robustly. I'm working on the following problems in the field of robotic Task and Motion Planning (TAMP):
+    <ul>
+      <li> Hierarchical planning and replanning </li>
+      <li> Learn to predict plan feasibility from images </li>
+      <li> Learn to solve constraint satisfaction problems (e.g. bin packing problem) </li>
+    </ul>
+
+
     <h2>Publications</h2>
     <ul class="publications">
       {% for pub in publications %}
@@ -33,8 +42,9 @@
             <span class="pub-title">{{ pub.title }}</span></p>
           <p>{{ pub.authors | safe }}</p>
           <p>{{ pub.conference }}</p>
+          <p>{{ pub.extra | safe }}</p>
         </li>
       {% endfor %}
-    </ul> -->
+    </ul>
   </body>
 </html>
