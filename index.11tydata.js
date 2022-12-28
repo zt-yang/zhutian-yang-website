@@ -62,7 +62,7 @@ module.exports = {
       conference: "CoRL 2022, Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning",
       extra: extraInfo({
         paper: "http://arxiv.org/abs/2211.01576",
-        news: "Best Paper Runner-Up!"
+        news: "&#128293; We won Best Paper Runner-Up!"
       })
     },
     {
