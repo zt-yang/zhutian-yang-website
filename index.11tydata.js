@@ -59,8 +59,11 @@ module.exports = {
     {
       title: "Sequence-Based Plan Feasibility Prediction for Efficient Task and Motion Planning",
       authors: authorList([ yang, caelan, dieter ]),
-      conference: "CoRL 2022, Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning (in submission)",
-      extra: extraInfo({paper: "http://arxiv.org/abs/2211.01576"})
+      conference: "CoRL 2022, Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning",
+      extra: extraInfo({
+        paper: "http://arxiv.org/abs/2211.01576",
+        news: "Best Paper Runner-Up!"
+      })
     },
     {
       title: "Let’s Handle It: Generalizable Manipulation of Articulated Objects",
