@@ -58,10 +58,6 @@ function extraInfo(options) {
     <iframe class="posterlink" id="${id}" src="${poster}" style="display:none;" width="${postersize[0]}px"
     height="${postersize[1]}px" allow="autoplay"></iframe>`)
   }
-  // if (poster !== "" && id !== "") {
-  //   list.push(`<span class="posterbutton"  onmouseover="document.getElementById('${id}').style.display='block'" onmouseout="document.getElementById('${id}').style.display='none'">[Poster]</span>
-  //   <iframe class="posterlink" id="${id}" src="${poster}" style="display:none" allow="autoplay"></iframe>`)
-  // }
   return line + list.join("&nbsp;");
 }
 
@@ -72,7 +68,7 @@ module.exports = {
     {
       title: "Sequence-Based Plan Feasibility Prediction for Efficient Task and Motion Planning",
       authors: authorList([ yang, caelan, dieter ]),
-      conference: "CoRL 2022, Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning",
+      conference: "CoRL 2022 Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning",
       visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/piginet_tasks.gif?raw=true",
       extra: extraInfo({
         paper: "http://arxiv.org/abs/2211.01576",
@@ -85,8 +81,8 @@ module.exports = {
     {
       title: "Let’s Handle It: Generalizable Manipulation of Articulated Objects",
       authors: authorList([ yang, aidan ]),
-      conference: "ICRL 2022, Generalizable Policy Learning in the Physical World",
-      visual: "https://drive.google.com/file/d/1ZdxxdBvNItIusQLCQgWHiqGqMAFSV3zE/view?usp=share_link",
+      conference: "ICRL 2022 Workshop on Generalizable Policy Learning in the Physical World",
+      visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/iclr22cover.jpg?raw=true",
       extra: extraInfo({
         paper: "https://openreview.net/pdf?id=SObVnEp4yb9",
         id: "maniskill",
