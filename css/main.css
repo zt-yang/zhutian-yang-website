@@ -81,11 +81,44 @@ ul {
 }
 
 .figure {
-  width: 100%;
+  margin-left: -174px;
+  width: 300px;
   height: 100%;
+  padding-top: 10px;
 }
 
 .caption {
   text-align: center;
   margin-top: 0.2em !important;
+}
+
+/* Create two equal columns that floats next to each other */
+.columnimg {
+  float: left;
+  width: 15%;
+  padding: 10px;
+}
+
+.columntext {
+  float: right;
+  width: 78%;
+  padding: 10px;
+  padding-top: 0px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.posterbutton {
+  display: inline;
+  color: #3498db;
+  text-decoration: none;
+}
+
+.posterlink {
+  margin-top: 5px;
 }

@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Zhutian Yang is a PhD student at MIT">
     <link rel="stylesheet" href="css/main.css">
+    <script>
+      var blue = "#3498db";
+      var darkblue = "#2980b9";
+      function underlineSpan(x) {
+        x.style.textDecoration = 'underline';
+        x.style.color = $darkblue
+      }
+
+      function normalSpan(x) {
+        x.style.textDecoration = 'none';
+        x.style.color = $blue
+      }
+    </script>
+
   </head>
   <body>
     <table>
@@ -26,35 +40,67 @@
 
 
     <h2>Research</h2>
-    Household robots planning long-horizon behavior, such as heating up takeouts and cleaning the kitchen counter, must be able to plan quickly and execute robustly. I'm working on the following problems in the field of robotic Task and Motion Planning (TAMP):
+    Household robots planning long-horizon behavior, such as heating up takeouts and cleaning the kitchen counter, must be able to <b>plan quickly and execute robustly</b> in <b>semantically rich, geommetrically complex environments</b>. I'm working on the following problems in the field of robotic Task and Motion Planning (TAMP):
     <ul>
       <li> Hierarchical planning and replanning </li>
       <li> Learn to predict plan feasibility from images </li>
-      <li> Learn to solve constraint satisfaction problems (e.g. bin packing problem) </li>
+      <li> Learn to solve constraint satisfaction problems (e.g. bin packing problems) </li>
     </ul>
 
-    <img class="figure" src="https://github.com/zt-yang/zhutian-yang-website/blob/main/img/piginet_tasks.gif?raw=true">
-    <p class="caption"> Figure: Robots learning to plan motion faster for rearrangement tasks </p>
+    <iframe width="800" height="450"
+      src="https://www.youtube.com/embed/0WjD5FeXQB0">
+    </iframe>
+    <p class="caption"> Music Video: Robots learning to plan motion faster for household tasks </p>
+
+    <!-- <img class="figure" src="https://github.com/zt-yang/zhutian-yang-website/blob/main/img/piginet_tasks.gif?raw=true">
+    <p class="caption"> Figure: Robots learning to plan motion faster for rearrangement tasks </p> -->
 
     <h2>Publications</h2>
+
     <ul class="publications">
       
-        <li class="pub">
-          <p>
-            <span class="pub-title">Sequence-Based Plan Feasibility Prediction for Efficient Task and Motion Planning</span></p>
-          <p><span class="self-author">Zhutian Yang</span>, Caelan Reed Garrett, and Dieter Fox</p>
-          <p>CoRL 2022, Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning</p>
-          <p><p style="color: grey"><i>&#128293; We won Best Paper Runner-Up!</i></p><a href="http://arxiv.org/abs/2211.01576">[Paper]</a></p>
-        </li>
-      
-        <li class="pub">
-          <p>
-            <span class="pub-title">Let’s Handle It: Generalizable Manipulation of Articulated Objects</span></p>
-          <p><span class="self-author">Zhutian Yang</span>, and Aidan Curtis</p>
-          <p>ICRL 2022, Generalizable Policy Learning in the Physical World</p>
-          <p><p style="color: grey"><i>&#128293; We won 2nd place in the ManiSkill Challenge 2022 Robotics Track</i></p><a href="https://openreview.net/pdf?id=SObVnEp4yb9">[Paper]</a></p>
-        </li>
-      
+      <div class="row">
+        <div class="columnimg">
+          <img class="figure" src="https://github.com/zt-yang/zhutian-yang-website/blob/main/img/piginet_tasks.gif?raw=true">
+        </div>
+        <div class="columntext">
+
+            <li class="pub">
+              <p>
+                <span class="pub-title">Sequence-Based Plan Feasibility Prediction for Efficient Task and Motion Planning</span></p>
+              <p><span class="self-author">Zhutian Yang</span>, Caelan Reed Garrett, and Dieter Fox</p>
+              <p>CoRL 2022, Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning</p>
+              <p><p style="color: grey"><i>&#128293; We won Best Paper Runner-Up!</i></p><a href="http://arxiv.org/abs/2211.01576">[Paper]</a>&nbsp;<span id="showpiginet" class="posterbutton"  onclick="document.getElementById('piginet').style.display='block'; document.getElementById('hidepiginet').style.display='inline'; document.getElementById('showpiginet').style.display='none'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)">[Poster (click to show)]</span>
+    <span id="hidepiginet" class="posterbutton" style="display:none" onclick="document.getElementById('piginet').style.display='none'; document.getElementById('hidepiginet').style.display='none'; document.getElementById('showpiginet').style.display='inline'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)"">[Poster (click to hide)]</span>
+    <iframe class="posterlink" id="piginet" src="https://drive.google.com/file/d/1wnBqlRWs2qvFNoK2X20d6SMYNGieqe6t/preview" style="display:none;" width="800px"
+    height="440px" allow="autoplay"></iframe></p>
+            </li>
+
+        </div>
+      </div>
+
+    
+      <div class="row">
+        <div class="columnimg">
+          <img class="figure" src="https://drive.google.com/file/d/1ZdxxdBvNItIusQLCQgWHiqGqMAFSV3zE/view?usp=share_link">
+        </div>
+        <div class="columntext">
+
+            <li class="pub">
+              <p>
+                <span class="pub-title">Let’s Handle It: Generalizable Manipulation of Articulated Objects</span></p>
+              <p><span class="self-author">Zhutian Yang</span>, and Aidan Curtis</p>
+              <p>ICRL 2022, Generalizable Policy Learning in the Physical World</p>
+              <p><p style="color: grey"><i>&#128293; We won 2nd place in the ManiSkill Challenge 2022 Robotics Track</i></p><a href="https://openreview.net/pdf?id=SObVnEp4yb9">[Paper]</a>&nbsp;<span id="showmaniskill" class="posterbutton"  onclick="document.getElementById('maniskill').style.display='block'; document.getElementById('hidemaniskill').style.display='inline'; document.getElementById('showmaniskill').style.display='none'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)">[Poster (click to show)]</span>
+    <span id="hidemaniskill" class="posterbutton" style="display:none" onclick="document.getElementById('maniskill').style.display='none'; document.getElementById('hidemaniskill').style.display='none'; document.getElementById('showmaniskill').style.display='inline'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)"">[Poster (click to hide)]</span>
+    <iframe class="posterlink" id="maniskill" src="https://drive.google.com/file/d/1arsOQ_e9Ydt12QbYNd6uIswdKFz-fcHP/preview" style="display:none;" width="800px"
+    height="534px" allow="autoplay"></iframe></p>
+            </li>
+
+        </div>
+      </div>
+
+    
     </ul>
   </body>
 </html>
