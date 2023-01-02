@@ -69,7 +69,7 @@ module.exports = {
       title: "Sequence-Based Plan Feasibility Prediction for Efficient Task and Motion Planning",
       authors: authorList([ yang, caelan, dieter ]),
       conference: "CoRL 2022 Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning",
-      visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/piginet_tasks.gif?raw=true",
+      visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/corl22cover_cropped.gif?raw=true",
       extra: extraInfo({
         paper: "http://arxiv.org/abs/2211.01576",
         id: "piginet",
@@ -82,7 +82,7 @@ module.exports = {
       title: "Let’s Handle It: Generalizable Manipulation of Articulated Objects",
       authors: authorList([ yang, aidan ]),
       conference: "ICRL 2022 Workshop on Generalizable Policy Learning in the Physical World",
-      visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/iclr22cover.jpg?raw=true",
+      visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/iclr22cover_cropped.jpg?raw=true",
       extra: extraInfo({
         paper: "https://openreview.net/pdf?id=SObVnEp4yb9",
         id: "maniskill",
