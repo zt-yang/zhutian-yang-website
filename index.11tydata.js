@@ -71,8 +71,9 @@ module.exports = {
       conference: "CoRL 2022 Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning",
       visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/corl22cover_cropped.gif?raw=true",
       extra: extraInfo({
-        paper: "http://arxiv.org/abs/2211.01576",
+        paper: "https://piginet.github.io/paper/RSS_PIGINet.pdf",
         id: "piginet",
+        page: "https://piginet.github.io/",
         poster: "https://drive.google.com/file/d/1wnBqlRWs2qvFNoK2X20d6SMYNGieqe6t/preview",
         postersize: [800, 440], // 20.86 x 11.46 inches
         news: "&#128293; We won Best Paper Runner-Up!"
