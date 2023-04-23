@@ -67,16 +67,15 @@ module.exports = {
   publications: [
     {
       title: "Sequence-Based Plan Feasibility Prediction for Efficient Task and Motion Planning",
-      authors: authorList([ yang, caelan, dieter ]),
-      conference: "CoRL 2022 Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning",
-      visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/corl22cover_cropped.gif?raw=true",
+      authors: authorList([ yang, caelan, lpk, tlp, dieter ]),
+      conference: "RSS 2023; also appeared in CoRL 2022 Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning (Spotlight Talk, Best Paper Runner-Up)",
+      visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/rss23kitchens.gif?raw=true",
       extra: extraInfo({
         paper: "https://piginet.github.io/paper/RSS_PIGINet.pdf",
         id: "piginet",
         page: "https://piginet.github.io/",
         poster: "https://drive.google.com/file/d/1wnBqlRWs2qvFNoK2X20d6SMYNGieqe6t/preview",
         postersize: [800, 440], // 20.86 x 11.46 inches
-        news: "&#128293; We won Best Paper Runner-Up!"
       })
     },
     {
