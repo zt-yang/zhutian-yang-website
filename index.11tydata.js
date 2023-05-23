@@ -103,7 +103,7 @@ module.exports = {
     {
       title: "Learning by Asking Questions and Learning by Aligning Stories: How a Story-Grounded Problem Solver can Acquire Knowledge",
       authors: authorList([ yang, patric ]),
-      conference: "DSpace@MIT",
+      conference: "Advances in Cognitive Systems 2018; DSpace@MIT",
       visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/robochef19cover.png?raw=true",
       extra: extraInfo({
         paper: "https://dspace.mit.edu/handle/1721.1/119668",
