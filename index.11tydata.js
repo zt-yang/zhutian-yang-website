@@ -37,6 +37,7 @@ function extraInfo(options) {
   var list = [];
   var news = "news" in options ? options.news : "";
   var talk = "talk" in options ? options.talk : "";
+  var demo = "demo" in options ? options.demo : "";
   var paper = "paper" in options ? options.paper : "";
   var id = "id" in options ? options.id : "";
   var poster = "poster" in options ? options.poster : "";
@@ -55,6 +56,9 @@ function extraInfo(options) {
   }
   if (talk !== "") {
     list.push(`<a href="${talk}">[Talk]</a>`)
+  }
+  if (demo !== "") {
+    list.push(`<a href="${demo}">[Video Demo]</a>`)
   }
   if (video !== "" && id !== "") {
     list.push(`<span id="showvid${id}" class="posterbutton"  onclick="document.getElementById('vid${id}').style.display='block'; document.getElementById('hidevid${id}').style.display='inline'; document.getElementById('showvid${id}').style.display='none'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)">[Video (click to show)]</span>
@@ -109,8 +113,7 @@ module.exports = {
       extra: extraInfo({
         paper: "https://dspace.mit.edu/handle/1721.1/119668",
         id: "robotchef",
-        video: "https://youtu.be/oGgHGs0lKPU",
-        videosize: [800, 534], 
+        demo: "https://youtu.be/oGgHGs0lKPU",
         poster: "https://drive.google.com/file/d/1FMIQsfJN5r8Rkqw435AHijorCHgjXDkq/preview",
         postersize: [800, 534], 
       }),
