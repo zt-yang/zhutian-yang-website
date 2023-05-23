@@ -41,8 +41,8 @@ function extraInfo(options) {
   var id = "id" in options ? options.id : "";
   var poster = "poster" in options ? options.poster : "";
   var postersize = "postersize" in options ? options.postersize : [800, 440];
-  var video = "video" in options ? options.poster : "";
-  var videosize = "postersize" in options ? options.postersize : [800, 440];
+  var video = "video" in options ? options.video : "";
+  var videosize = "videosize" in options ? options.videosize : [800, 440];
   var page = "page" in options ? options.page : "";
   if (news !== "") {
     line = `<p style="color: grey"><i>${news}</i></p>`
@@ -59,7 +59,7 @@ function extraInfo(options) {
   if (video !== "" && id !== "") {
     list.push(`<span id="showvid${id}" class="posterbutton"  onclick="document.getElementById('vid${id}').style.display='block'; document.getElementById('hidevid${id}').style.display='inline'; document.getElementById('showvid${id}').style.display='none'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)">[Video (click to show)]</span>
     <span id="hidevid${id}" class="posterbutton" style="display:none" onclick="document.getElementById('vid${id}').style.display='none'; document.getElementById('hidevid${id}').style.display='none'; document.getElementById('showvid${id}').style.display='inline'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)"">[Video (click to hide)]</span>
-    <iframe class="posterlink" id="vid${id}" src="${video}" style="display:none;" width="${videosize[0]}px"
+    <iframe class="posterlink" frameborder="0" id="vid${id}" src="${video}" style="display:none;" width="${videosize[0]}px"
     height="${videosize[1]}px" allow="autoplay"></iframe>`)
   }
   if (poster !== "" && id !== "") {
