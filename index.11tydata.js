@@ -13,6 +13,7 @@ const tlp = "Tomás Lozano-Pérez";
 const dieter = "Dieter Fox";
 const aidan = "Aidan Curtis";
 const patrick = "Patrick H. Winston";
+const hsu = "David Hsu";
 
 // authorList generates the HTML for the author list from a JS array
 function authorList(authors) {
@@ -55,17 +56,17 @@ function extraInfo(options) {
   if (talk !== "") {
     list.push(`<a href="${talk}">[Talk]</a>`)
   }
-  if (poster !== "" && id !== "") {
-    list.push(`<span id="show${id}" class="posterbutton"  onclick="document.getElementById('${id}').style.display='block'; document.getElementById('hide${id}').style.display='inline'; document.getElementById('show${id}').style.display='none'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)">[Poster (click to show)]</span>
-    <span id="hide${id}" class="posterbutton" style="display:none" onclick="document.getElementById('${id}').style.display='none'; document.getElementById('hide${id}').style.display='none'; document.getElementById('show${id}').style.display='inline'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)"">[Poster (click to hide)]</span>
-    <iframe class="posterlink" id="${id}" src="${poster}" style="display:none;" width="${postersize[0]}px"
-    height="${postersize[1]}px" allow="autoplay"></iframe>`)
-  }
   if (video !== "" && id !== "") {
     list.push(`<span id="showvid${id}" class="posterbutton"  onclick="document.getElementById('vid${id}').style.display='block'; document.getElementById('hidevid${id}').style.display='inline'; document.getElementById('showvid${id}').style.display='none'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)">[Video (click to show)]</span>
     <span id="hidevid${id}" class="posterbutton" style="display:none" onclick="document.getElementById('vid${id}').style.display='none'; document.getElementById('hidevid${id}').style.display='none'; document.getElementById('showvid${id}').style.display='inline'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)"">[Video (click to hide)]</span>
     <iframe class="posterlink" id="vid${id}" src="${video}" style="display:none;" width="${videosize[0]}px"
     height="${videosize[1]}px" allow="autoplay"></iframe>`)
+  }
+  if (poster !== "" && id !== "") {
+    list.push(`<span id="show${id}" class="posterbutton"  onclick="document.getElementById('${id}').style.display='block'; document.getElementById('hide${id}').style.display='inline'; document.getElementById('show${id}').style.display='none'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)">[Poster (click to show)]</span>
+    <span id="hide${id}" class="posterbutton" style="display:none" onclick="document.getElementById('${id}').style.display='none'; document.getElementById('hide${id}').style.display='none'; document.getElementById('show${id}').style.display='inline'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)"">[Poster (click to hide)]</span>
+    <iframe class="posterlink" id="${id}" src="${poster}" style="display:none;" width="${postersize[0]}px"
+    height="${postersize[1]}px" allow="autoplay"></iframe>`)
   }
   return line + list.join("&nbsp;");
 }
@@ -101,9 +102,9 @@ module.exports = {
       }),
     },
     {
-      title: "Learning by Asking Questions and Learning by Aligning Stories: How a Story-Grounded Problem Solver can Acquire Knowledge",
-      authors: authorList([ yang, patric ]),
-      conference: "Advances in Cognitive Systems 2018; DSpace@MIT",
+      title: "Flexibly Instructable Robots",
+      authors: authorList([ yang, patrick, hsu ]),
+      conference: "Undergraduate thesis work; Also appeared in Advances in Cognitive Systems 2019 and DSpace@MIT",
       visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/robochef19cover.png?raw=true",
       extra: extraInfo({
         paper: "https://dspace.mit.edu/handle/1721.1/119668",
