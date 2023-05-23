@@ -12,6 +12,7 @@ const lpk = "Leslie Pack Kaelbling";
 const tlp = "Tomás Lozano-Pérez";
 const dieter = "Dieter Fox";
 const aidan = "Aidan Curtis";
+const patrick = "Patrick H. Winston";
 
 // authorList generates the HTML for the author list from a JS array
 function authorList(authors) {
@@ -36,9 +37,11 @@ function extraInfo(options) {
   var news = "news" in options ? options.news : "";
   var talk = "talk" in options ? options.talk : "";
   var paper = "paper" in options ? options.paper : "";
+  var id = "id" in options ? options.id : "";
   var poster = "poster" in options ? options.poster : "";
   var postersize = "postersize" in options ? options.postersize : [800, 440];
-  var id = "id" in options ? options.id : "";
+  var video = "video" in options ? options.poster : "";
+  var videosize = "postersize" in options ? options.postersize : [800, 440];
   var page = "page" in options ? options.page : "";
   if (news !== "") {
     line = `<p style="color: grey"><i>${news}</i></p>`
@@ -57,6 +60,12 @@ function extraInfo(options) {
     <span id="hide${id}" class="posterbutton" style="display:none" onclick="document.getElementById('${id}').style.display='none'; document.getElementById('hide${id}').style.display='none'; document.getElementById('show${id}').style.display='inline'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)"">[Poster (click to hide)]</span>
     <iframe class="posterlink" id="${id}" src="${poster}" style="display:none;" width="${postersize[0]}px"
     height="${postersize[1]}px" allow="autoplay"></iframe>`)
+  }
+  if (video !== "" && id !== "") {
+    list.push(`<span id="showvid${id}" class="posterbutton"  onclick="document.getElementById('vid${id}').style.display='block'; document.getElementById('hidevid${id}').style.display='inline'; document.getElementById('showvid${id}').style.display='none'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)">[Video (click to show)]</span>
+    <span id="hidevid${id}" class="posterbutton" style="display:none" onclick="document.getElementById('vid${id}').style.display='none'; document.getElementById('hidevid${id}').style.display='none'; document.getElementById('showvid${id}').style.display='inline'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)"">[Video (click to hide)]</span>
+    <iframe class="posterlink" id="vid${id}" src="${video}" style="display:none;" width="${videosize[0]}px"
+    height="${videosize[1]}px" allow="autoplay"></iframe>`)
   }
   return line + list.join("&nbsp;");
 }
@@ -87,8 +96,22 @@ module.exports = {
         paper: "https://openreview.net/pdf?id=SObVnEp4yb9",
         id: "maniskill",
         poster: "https://drive.google.com/file/d/1arsOQ_e9Ydt12QbYNd6uIswdKFz-fcHP/preview",
-        postersize: [800, 534], // 2592 × 1728
+        postersize: [800, 534], // 2592×1728
         news: "&#128293; We won 2nd place in the ManiSkill Challenge 2022 Robotics Track"
+      }),
+    },
+    {
+      title: "Learning by Asking Questions and Learning by Aligning Stories: How a Story-Grounded Problem Solver can Acquire Knowledge",
+      authors: authorList([ yang, patric ]),
+      conference: "DSpace@MIT",
+      visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/robochef19cover.png?raw=true",
+      extra: extraInfo({
+        paper: "https://dspace.mit.edu/handle/1721.1/119668",
+        id: "robotchef",
+        video: "https://youtu.be/oGgHGs0lKPU",
+        videosize: [800, 534], 
+        poster: "https://drive.google.com/file/d/1FMIQsfJN5r8Rkqw435AHijorCHgjXDkq/preview",
+        postersize: [800, 534], 
       }),
     },
   ],
