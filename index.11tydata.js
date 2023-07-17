@@ -35,7 +35,7 @@ function authorList(authors) {
 function extraInfo(options) {
   var line = "";
   var list = [];
-  var news = "news" in options ? options.news : "";
+  var shoutout = "shoutout" in options ? options.shoutout : "";
   var talk = "talk" in options ? options.talk : "";
   var demo = "demo" in options ? options.demo : "";
   var paper = "paper" in options ? options.paper : "";
@@ -47,8 +47,9 @@ function extraInfo(options) {
   var page = "page" in options ? options.page : "";
   var mediaurl = "mediaurl" in options ? options.mediaurl : "";
   var medianame = "medianame" in options ? options.medianame : "";
-  if (news !== "") {
-    line = `<p style="color: grey"><i>${news}</i></p>`
+
+  if (shoutout !== "") {
+    line = `<p style="color: grey"><i>${shoutout}</i></p>`
   }
   if (paper !== "") {
     list.push(`<a href="${paper}">[Paper]</a>`)
@@ -62,7 +63,7 @@ function extraInfo(options) {
   if (demo !== "") {
     list.push(`<a href="${demo}">[Video Demo]</a>`)
   }
-  if (mediaurl !== "") {
+  if (mediaurl !== "" && medianame !== "") {
     list.push(`<a href="${mediaurl}">[${medianame}]</a>`)
   }
   if (video !== "" && id !== "") {
@@ -83,6 +84,9 @@ function extraInfo(options) {
 module.exports = {
   name: "Zhutian Yang",
   email: "ztyang {at} mit {dot} edu",
+  twitter: "https://twitter.com/ZhutianYang_",
+  linkedin: "https://www.linkedin.com/in/zhutian-yang/",
+  github: "https://github.com/zt-yang",
   publications: [
     {
       title: "Sequence-Based Plan Feasibility Prediction for Efficient Task and Motion Planning",
@@ -94,8 +98,8 @@ module.exports = {
         id: "piginet",
         page: "https://piginet.github.io/",
         mediaurl: "https://news.mit.edu/2023/ai-helps-household-robots-cut-planning-time-half-0714",
-        medianame: "MIT News"
-        news: "&#128293; We won Best Paper Runner-Up in CoRL 2022 Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning"
+        medianame: "MIT News",
+        shoutout: "&#128293; We won Best Paper Runner-Up in CoRL 2022 Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning"
         // poster: "https://drive.google.com/file/d/1wnBqlRWs2qvFNoK2X20d6SMYNGieqe6t/preview",
         // postersize: [800, 440], // 20.86 x 11.46 inches
       })
@@ -110,7 +114,7 @@ module.exports = {
         id: "maniskill",
         poster: "https://drive.google.com/file/d/1arsOQ_e9Ydt12QbYNd6uIswdKFz-fcHP/preview",
         postersize: [800, 534], // 2592×1728
-        news: "&#128293; We won 2nd place in the ManiSkill Challenge 2022 Robotics Track"
+        shoutout: "&#128293; We won 2nd place in the ManiSkill Challenge 2022 Robotics Track"
       }),
     },
     {
