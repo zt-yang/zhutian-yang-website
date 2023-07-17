@@ -97,6 +97,7 @@ module.exports = {
         paper: "https://arxiv.org/abs/2211.01576",
         id: "piginet",
         page: "https://piginet.github.io/",
+        talk: "https://youtu.be/QXmcu9fVnak?t=23991",
         mediaurl: "https://news.mit.edu/2023/ai-helps-household-robots-cut-planning-time-half-0714",
         medianame: "MIT News",
         shoutout: "&#128293; We also won Best Paper Runner-Up in CoRL 2022 Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning",
