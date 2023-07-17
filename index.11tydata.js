@@ -45,6 +45,8 @@ function extraInfo(options) {
   var video = "video" in options ? options.video : "";
   var videosize = "videosize" in options ? options.videosize : [800, 440];
   var page = "page" in options ? options.page : "";
+  var mediaurl = "mediaurl" in options ? options.mediaurl : "";
+  var medianame = "medianame" in options ? options.medianame : "";
   if (news !== "") {
     line = `<p style="color: grey"><i>${news}</i></p>`
   }
@@ -59,6 +61,9 @@ function extraInfo(options) {
   }
   if (demo !== "") {
     list.push(`<a href="${demo}">[Video Demo]</a>`)
+  }
+  if (mediaurl !== "") {
+    list.push(`<a href="${mediaurl}">[${medianame}]</a>`)
   }
   if (video !== "" && id !== "") {
     list.push(`<span id="showvid${id}" class="posterbutton"  onclick="document.getElementById('vid${id}').style.display='block'; document.getElementById('hidevid${id}').style.display='inline'; document.getElementById('showvid${id}').style.display='none'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)">[Video (click to show)]</span>
@@ -84,11 +89,12 @@ module.exports = {
       authors: authorList([ yang, caelan, lpk, tlp, dieter ]),
       conference: "RSS 2023",
       visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/rss23kitchens.gif?raw=true",
-      news: `PIGINet is reported by <a href="https://news.mit.edu/2023/ai-helps-household-robots-cut-planning-time-half-0714">MIT News</a>`,
       extra: extraInfo({
         paper: "https://arxiv.org/abs/2211.01576",
         id: "piginet",
         page: "https://piginet.github.io/",
+        mediaurl: "https://news.mit.edu/2023/ai-helps-household-robots-cut-planning-time-half-0714",
+        medianame: "MIT News"
         news: "&#128293; We won Best Paper Runner-Up in CoRL 2022 Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning"
         // poster: "https://drive.google.com/file/d/1wnBqlRWs2qvFNoK2X20d6SMYNGieqe6t/preview",
         // postersize: [800, 440], // 20.86 x 11.46 inches
