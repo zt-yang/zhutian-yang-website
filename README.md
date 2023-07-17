@@ -84,7 +84,7 @@ your site to this branch every time you push to the repository.
 
 By default, your site will be accessible from a URL like
 https://zt-yang.github.io/zhutian-yang-website: it will use your username and
-whatever you named the repo. However, you can use just https://tchajed.github.io
+whatever you named the repo. However, you can use just https://zt-yang.github.io
 (again, with your username) by naming your repo tchajed.github.io.
 
 If you're willing to spend money on your website, you can also buy a custom
