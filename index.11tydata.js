@@ -52,19 +52,19 @@ function extraInfo(options) {
     line = `<p style="color: grey"><i>${shoutout}</i></p>`
   }
   if (paper !== "") {
-    list.push(`<a href="${paper}">[Paper]</a>`)
+    list.push(`<a href="${paper}" target="_blank">[Paper]</a>`)
   }
   if (page !== "") {
-    list.push(`<a href="${page}">[Project Page]</a>`)
+    list.push(`<a href="${page}" target="_blank">[Project Page]</a>`)
   }
   if (talk !== "") {
-    list.push(`<a href="${talk}">[Talk]</a>`)
+    list.push(`<a href="${talk}" target="_blank">[Talk]</a>`)
   }
   if (demo !== "") {
-    list.push(`<a href="${demo}">[Video Demo]</a>`)
+    list.push(`<a href="${demo}" target="_blank">[Video Demo]</a>`)
   }
   if (mediaurl !== "" && medianame !== "") {
-    list.push(`<a href="${mediaurl}">[${medianame}]</a>`)
+    list.push(`<a href="${mediaurl}" target="_blank">[${medianame}]</a>`)
   }
   if (video !== "" && id !== "") {
     list.push(`<span id="showvid${id}" class="posterbutton"  onclick="document.getElementById('vid${id}').style.display='block'; document.getElementById('hidevid${id}').style.display='inline'; document.getElementById('showvid${id}').style.display='none'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)">[Video (click to show)]</span>
