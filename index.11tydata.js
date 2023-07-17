@@ -84,6 +84,7 @@ module.exports = {
       authors: authorList([ yang, caelan, lpk, tlp, dieter ]),
       conference: "RSS 2023; also appeared in CoRL 2022 Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning (Spotlight Talk, Best Paper Runner-Up)",
       visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/rss23kitchens.gif?raw=true",
+      news: `PIGINet is reported by <a href="https://news.mit.edu/2023/ai-helps-household-robots-cut-planning-time-half-0714">MIT News</a>`,
       extra: extraInfo({
         paper: "https://arxiv.org/abs/2211.01576",
         id: "piginet",
