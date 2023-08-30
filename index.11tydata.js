@@ -12,8 +12,13 @@ const lpk = "Leslie Pack Kaelbling";
 const tlp = "Tomás Lozano-Pérez";
 const dieter = "Dieter Fox";
 const aidan = "Aidan Curtis";
-const patrick = "Patrick H. Winston";
+const patrick = "Patrick Henry Winston";
 const hsu = "David Hsu";
+const jiayuan = "Jiayuan Mao"
+const jiajun = "Jiajun Wu"
+const yilun = "Yilun Du"
+const jbt = "Joshua Brett Tenenbaum"
+
 
 // authorList generates the HTML for the author list from a JS array
 function authorList(authors) {
@@ -88,6 +93,17 @@ module.exports = {
   linkedin: "https://www.linkedin.com/in/zhutian-yang/",
   github: "https://github.com/zt-yang",
   publications: [
+    {
+      title: "Compositional Diffusion-Based Continuous Constraint Solvers",
+      authors: authorList([ yang, jiayuan, yilun, jiajun, jbt, tlp, lpk]),
+      conference: "CoRL 2023",
+      visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/corl23packing.gif?raw=true",
+      extra: extraInfo({
+        paper: "https://diffusion-ccsp.github.io/paper/diffusion_ccsp_corl2023.pdf",
+        id: "diffusion-ccsp",
+        page: "https://diffusion-ccsp.github.io/",
+      })
+    },
     {
       title: "Sequence-Based Plan Feasibility Prediction for Efficient Task and Motion Planning",
       authors: authorList([ yang, caelan, lpk, tlp, dieter ]),
