@@ -99,7 +99,7 @@ module.exports = {
       conference: "CoRL 2023",
       visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/corl23packing.gif?raw=true",
       extra: extraInfo({
-        paper: "https://diffusion-ccsp.github.io/paper/diffusion_ccsp_corl2023.pdf",
+        paper: "http://arxiv.org/abs/2309.00966",
         id: "diffusion-ccsp",
         page: "https://diffusion-ccsp.github.io/",
       })
