@@ -19,6 +19,66 @@
         x.style.textDecoration = 'none';
         x.style.color = $blue
       }
+
+      
+      var bibtex_piginet = `
+  @INPROCEEDINGS{yang2023piginet, 
+    AUTHOR    = {Zhutian  Yang AND Caelan R Garrett AND Lozano-P{\\'e}rez, Tom{\\'a}s AND Leslie Kaelbling AND Dieter Fox}, 
+    TITLE     = {{Sequence-Based Plan Feasibility Prediction for Efficient Task and Motion Planning}}, 
+    BOOKTITLE = {Proceedings of Robotics: Science and Systems}, 
+    YEAR      = {2023}, 
+    ADDRESS   = {Daegu, Republic of Korea}, 
+    MONTH     = {July}, 
+    DOI       = {10.15607/RSS.2023.XIX.061} 
+  } 
+      `;
+
+      var bibtex_diffusion_ccsp = `
+  @inproceedings{yang2023diffusion,
+    title={{Compositional Diffusion-Based Continuous Constraint Solvers}},
+    author={Yang, Zhutian and Mao, Jiayuan and Du, Yilun and Wu, Jiajun and Tenenbaum, Joshua B. and Lozano-P{\\'e}rez, Tom{\\'a}s and Kaelbling, Leslie Pack},
+    booktitle={Conference on Robot Learning},
+    year={2023},
+  }
+      `;
+      
+      
+      // copy predefinedString once clicked
+      function copyPiginetToClipboard() {    
+          copyToClipboard(bibtex_piginet)
+      }
+      
+      function copyDiffusionCCSPToClipboard() {  
+          copyToClipboard(bibtex_diffusion_ccsp)
+      }
+
+      function copyedNotice() { 
+        // Show the notice and hide it after 2 seconds
+        const notice = document.getElementById("copynotice");
+        notice.classList.remove("hidden");
+        notice.style.opacity = "1";
+        setTimeout(() => {
+            notice.style.opacity = "0";
+            setTimeout(() => {
+                notice.classList.add("hidden");
+            }, 300);  // Wait for opacity transition to complete before hiding
+        }, 2000);
+      }
+
+      // copy predefinedString once clicked
+      function copyToClipboard(predefinedString) {    
+          // Create a temporary textarea to utilize the execCommand('copy') method
+          const tempTextArea = document.createElement("textarea");
+          document.body.appendChild(tempTextArea);
+          tempTextArea.value = predefinedString;
+          tempTextArea.select();
+          document.execCommand("copy");
+          document.body.removeChild(tempTextArea);
+
+          // alert("Text copied to clipboard: " + predefinedString);
+          copyedNotice();
+      }
+
     </script>
 
   </head>
@@ -72,6 +132,7 @@
     <p class="caption"> Figure: Robots learning to plan motion faster for rearrangement tasks </p> -->
 
     <h2>Publications</h2>
+    <div id="copynotice" class="hidden">Bibtex copied to clipboard!</div>
 
     <ul class="publications">
       
@@ -86,7 +147,7 @@
                 <span class="pub-title">Compositional Diffusion-Based Continuous Constraint Solvers</span></p>
               <p><span class="self-author">Zhutian Yang</span>, Jiayuan Mao, Yilun Du, Jiajun Wu, Joshua Brett Tenenbaum, Tomás Lozano-Pérez, and Leslie Pack Kaelbling</p>
               <p><i>CoRL 2023</i></p>
-              <p><a href="http://arxiv.org/abs/2309.00966" target="_blank">[Paper]</a>&nbsp;<a href="https://diffusion-ccsp.github.io/" target="_blank">[Project Page]</a></p>
+              <p><a href="http://arxiv.org/abs/2309.00966" target="_blank">Paper</a>&nbsp;&nbsp;<i>/</i>&nbsp;&nbsp;<a href="https://diffusion-ccsp.github.io/" target="_blank">Project Page</a>&nbsp;&nbsp;<i>/</i>&nbsp;&nbsp;<a class="buttona" onclick="copyDiffusionCCSPToClipboard();">Bibtex</a></p>
             </li>
 
         </div>
@@ -104,10 +165,10 @@
                 <span class="pub-title">Sequence-Based Plan Feasibility Prediction for Efficient Task and Motion Planning</span></p>
               <p><span class="self-author">Zhutian Yang</span>, Caelan Reed Garrett, Leslie Pack Kaelbling, Tomás Lozano-Pérez, and Dieter Fox</p>
               <p><i>RSS 2023</i></p>
-              <p><p style="color: grey"><i>&#128293; We also won Best Paper Runner-Up in CoRL 2022 Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning</i></p><a href="https://arxiv.org/abs/2211.01576" target="_blank">[Paper]</a>&nbsp;<a href="https://piginet.github.io/" target="_blank">[Project Page]</a>&nbsp;<a href="https://youtu.be/QXmcu9fVnak?t=23991" target="_blank">[Talk]</a>&nbsp;<a href="https://news.mit.edu/2023/ai-helps-household-robots-cut-planning-time-half-0714" target="_blank">[MIT News]</a>&nbsp;<span id="showpiginet" class="posterbutton"  onclick="document.getElementById('piginet').style.display='block'; document.getElementById('hidepiginet').style.display='inline'; document.getElementById('showpiginet').style.display='none'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)">[Poster (click to show)]</span>
-    <span id="hidepiginet" class="posterbutton" style="display:none" onclick="document.getElementById('piginet').style.display='none'; document.getElementById('hidepiginet').style.display='none'; document.getElementById('showpiginet').style.display='inline'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)"">[Poster (click to hide)]</span>
+              <p><p style="color: grey"><i>&#128293; We also won Best Paper Runner-Up in CoRL 2022 Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning</i></p><a href="https://arxiv.org/abs/2211.01576" target="_blank">Paper</a>&nbsp;&nbsp;<i>/</i>&nbsp;&nbsp;<a href="https://piginet.github.io/" target="_blank">Project Page</a>&nbsp;&nbsp;<i>/</i>&nbsp;&nbsp;<a href="https://youtu.be/QXmcu9fVnak?t=23991" target="_blank">Talk</a>&nbsp;&nbsp;<i>/</i>&nbsp;&nbsp;<a href="https://news.mit.edu/2023/ai-helps-household-robots-cut-planning-time-half-0714" target="_blank">MIT News</a>&nbsp;&nbsp;<i>/</i>&nbsp;&nbsp;<span id="showpiginet" class="posterbutton"  onclick="document.getElementById('piginet').style.display='block'; document.getElementById('hidepiginet').style.display='inline'; document.getElementById('showpiginet').style.display='none'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)">Poster (click to show)</span>
+    <span id="hidepiginet" class="posterbutton" style="display:none" onclick="document.getElementById('piginet').style.display='none'; document.getElementById('hidepiginet').style.display='none'; document.getElementById('showpiginet').style.display='inline'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)"">Poster (click to hide)</span>
     <iframe class="posterlink" id="piginet" src="https://drive.google.com/file/d/1cpzkM4o91fNaOBnwIM_-YC58Yt5vOHML/preview" style="display:none;" width="800px"
-    height="440px" allow="autoplay"></iframe></p>
+    height="440px" allow="autoplay"></iframe>&nbsp;&nbsp;<i>/</i>&nbsp;&nbsp;<a class="buttona" onclick="copyPiginetToClipboard();">Bibtex</a></p>
             </li>
 
         </div>
@@ -125,8 +186,8 @@
                 <span class="pub-title">Let’s Handle It: Generalizable Manipulation of Articulated Objects</span></p>
               <p><span class="self-author">Zhutian Yang</span>, and Aidan Curtis</p>
               <p><i>ICRL 2022 Workshop on Generalizable Policy Learning in the Physical World</i></p>
-              <p><p style="color: grey"><i>&#128293; We won 2nd place in the ManiSkill Challenge 2022 Robotics Track</i></p><a href="https://openreview.net/pdf?id=SObVnEp4yb9" target="_blank">[Paper]</a>&nbsp;<span id="showmaniskill" class="posterbutton"  onclick="document.getElementById('maniskill').style.display='block'; document.getElementById('hidemaniskill').style.display='inline'; document.getElementById('showmaniskill').style.display='none'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)">[Poster (click to show)]</span>
-    <span id="hidemaniskill" class="posterbutton" style="display:none" onclick="document.getElementById('maniskill').style.display='none'; document.getElementById('hidemaniskill').style.display='none'; document.getElementById('showmaniskill').style.display='inline'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)"">[Poster (click to hide)]</span>
+              <p><p style="color: grey"><i>&#128293; We won 2nd place in the ManiSkill Challenge 2022 Robotics Track</i></p><a href="https://openreview.net/pdf?id=SObVnEp4yb9" target="_blank">Paper</a>&nbsp;&nbsp;<i>/</i>&nbsp;&nbsp;<span id="showmaniskill" class="posterbutton"  onclick="document.getElementById('maniskill').style.display='block'; document.getElementById('hidemaniskill').style.display='inline'; document.getElementById('showmaniskill').style.display='none'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)">Poster (click to show)</span>
+    <span id="hidemaniskill" class="posterbutton" style="display:none" onclick="document.getElementById('maniskill').style.display='none'; document.getElementById('hidemaniskill').style.display='none'; document.getElementById('showmaniskill').style.display='inline'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)"">Poster (click to hide)</span>
     <iframe class="posterlink" id="maniskill" src="https://drive.google.com/file/d/1arsOQ_e9Ydt12QbYNd6uIswdKFz-fcHP/preview" style="display:none;" width="800px"
     height="534px" allow="autoplay"></iframe></p>
             </li>
@@ -146,8 +207,8 @@
                 <span class="pub-title">Flexibly Instructable Robots</span></p>
               <p><span class="self-author">Zhutian Yang</span>, Patrick Henry Winston, and David Hsu</p>
               <p><i>Undergraduate thesis work; Also appeared in Advances in Cognitive Systems 2019 and DSpace@MIT</i></p>
-              <p><a href="https://dspace.mit.edu/handle/1721.1/119668" target="_blank">[Paper]</a>&nbsp;<a href="https://youtu.be/oGgHGs0lKPU" target="_blank">[Video Demo]</a>&nbsp;<span id="showrobotchef" class="posterbutton"  onclick="document.getElementById('robotchef').style.display='block'; document.getElementById('hiderobotchef').style.display='inline'; document.getElementById('showrobotchef').style.display='none'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)">[Poster (click to show)]</span>
-    <span id="hiderobotchef" class="posterbutton" style="display:none" onclick="document.getElementById('robotchef').style.display='none'; document.getElementById('hiderobotchef').style.display='none'; document.getElementById('showrobotchef').style.display='inline'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)"">[Poster (click to hide)]</span>
+              <p><a href="https://dspace.mit.edu/handle/1721.1/119668" target="_blank">Paper</a>&nbsp;&nbsp;<i>/</i>&nbsp;&nbsp;<a href="https://youtu.be/oGgHGs0lKPU" target="_blank">Video Demo</a>&nbsp;&nbsp;<i>/</i>&nbsp;&nbsp;<span id="showrobotchef" class="posterbutton"  onclick="document.getElementById('robotchef').style.display='block'; document.getElementById('hiderobotchef').style.display='inline'; document.getElementById('showrobotchef').style.display='none'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)">Poster (click to show)</span>
+    <span id="hiderobotchef" class="posterbutton" style="display:none" onclick="document.getElementById('robotchef').style.display='none'; document.getElementById('hiderobotchef').style.display='none'; document.getElementById('showrobotchef').style.display='inline'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)"">Poster (click to hide)</span>
     <iframe class="posterlink" id="robotchef" src="https://drive.google.com/file/d/1FMIQsfJN5r8Rkqw435AHijorCHgjXDkq/preview" style="display:none;" width="800px"
     height="534px" allow="autoplay"></iframe></p>
             </li>

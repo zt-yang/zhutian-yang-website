@@ -139,3 +139,26 @@ ul {
 .posterlink {
   margin-top: 5px;
 }
+
+.buttona {
+  cursor: pointer;
+}
+
+#copynotice {
+  position: fixed;
+  /* This ensures the notice floats relative to the window */
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
