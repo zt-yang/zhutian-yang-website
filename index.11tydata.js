@@ -52,38 +52,43 @@ function extraInfo(options) {
   var page = "page" in options ? options.page : "";
   var mediaurl = "mediaurl" in options ? options.mediaurl : "";
   var medianame = "medianame" in options ? options.medianame : "";
+  var bibtex = "bibtex" in options ? options.bibtex : "";
 
   if (shoutout !== "") {
     line = `<p style="color: grey"><i>${shoutout}</i></p>`
   }
   if (paper !== "") {
-    list.push(`<a href="${paper}" target="_blank">[Paper]</a>`)
+    list.push(`<a href="${paper}" target="_blank">Paper</a>`)
   }
   if (page !== "") {
-    list.push(`<a href="${page}" target="_blank">[Project Page]</a>`)
+    list.push(`<a href="${page}" target="_blank">Project Page</a>`)
   }
   if (talk !== "") {
-    list.push(`<a href="${talk}" target="_blank">[Talk]</a>`)
+    list.push(`<a href="${talk}" target="_blank">Talk</a>`)
   }
   if (demo !== "") {
-    list.push(`<a href="${demo}" target="_blank">[Video Demo]</a>`)
+    list.push(`<a href="${demo}" target="_blank">Video Demo</a>`)
   }
   if (mediaurl !== "" && medianame !== "") {
-    list.push(`<a href="${mediaurl}" target="_blank">[${medianame}]</a>`)
+    list.push(`<a href="${mediaurl}" target="_blank">${medianame}</a>`)
   }
   if (video !== "" && id !== "") {
-    list.push(`<span id="showvid${id}" class="posterbutton"  onclick="document.getElementById('vid${id}').style.display='block'; document.getElementById('hidevid${id}').style.display='inline'; document.getElementById('showvid${id}').style.display='none'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)">[Video (click to show)]</span>
-    <span id="hidevid${id}" class="posterbutton" style="display:none" onclick="document.getElementById('vid${id}').style.display='none'; document.getElementById('hidevid${id}').style.display='none'; document.getElementById('showvid${id}').style.display='inline'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)"">[Video (click to hide)]</span>
+    list.push(`<span id="showvid${id}" class="posterbutton"  onclick="document.getElementById('vid${id}').style.display='block'; document.getElementById('hidevid${id}').style.display='inline'; document.getElementById('showvid${id}').style.display='none'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)">Video (click to show)</span>
+    <span id="hidevid${id}" class="posterbutton" style="display:none" onclick="document.getElementById('vid${id}').style.display='none'; document.getElementById('hidevid${id}').style.display='none'; document.getElementById('showvid${id}').style.display='inline'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)"">Video (click to hide)</span>
     <iframe class="posterlink" frameborder="0" id="vid${id}" src="${video}" style="display:none;" width="${videosize[0]}px"
     height="${videosize[1]}px" allow="autoplay"></iframe>`)
   }
   if (poster !== "" && id !== "") {
-    list.push(`<span id="show${id}" class="posterbutton"  onclick="document.getElementById('${id}').style.display='block'; document.getElementById('hide${id}').style.display='inline'; document.getElementById('show${id}').style.display='none'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)">[Poster (click to show)]</span>
-    <span id="hide${id}" class="posterbutton" style="display:none" onclick="document.getElementById('${id}').style.display='none'; document.getElementById('hide${id}').style.display='none'; document.getElementById('show${id}').style.display='inline'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)"">[Poster (click to hide)]</span>
+    list.push(`<span id="show${id}" class="posterbutton"  onclick="document.getElementById('${id}').style.display='block'; document.getElementById('hide${id}').style.display='inline'; document.getElementById('show${id}').style.display='none'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)">Poster (click to show)</span>
+    <span id="hide${id}" class="posterbutton" style="display:none" onclick="document.getElementById('${id}').style.display='none'; document.getElementById('hide${id}').style.display='none'; document.getElementById('show${id}').style.display='inline'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)"">Poster (click to hide)</span>
     <iframe class="posterlink" id="${id}" src="${poster}" style="display:none;" width="${postersize[0]}px"
     height="${postersize[1]}px" allow="autoplay"></iframe>`)
   }
-  return line + list.join("&nbsp;");
+  if (bibtex !== "") {
+    list.push(`<a class="buttona" onclick="${bibtex}();">Bibtex</a>`)
+    // list.push(`<a class="buttona" onclick="copyToClipboard(${bibtex});">Bibtex</a>`)
+  }
+  return line + list.join("&nbsp;&nbsp;<i>/</i>&nbsp;&nbsp;");
 }
 
 module.exports = {
@@ -102,6 +107,7 @@ module.exports = {
         paper: "http://arxiv.org/abs/2309.00966",
         id: "diffusion-ccsp",
         page: "https://diffusion-ccsp.github.io/",
+        bibtex: "copyDiffusionCCSPToClipboard"
       })
     },
     {
@@ -119,6 +125,7 @@ module.exports = {
         shoutout: "&#128293; We also won Best Paper Runner-Up in CoRL 2022 Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning",
         poster: "https://drive.google.com/file/d/1cpzkM4o91fNaOBnwIM_-YC58Yt5vOHML/preview",
         postersize: [800, 440], // 1500×825
+        bibtex: "copyPiginetToClipboard"
       })
     },
     {

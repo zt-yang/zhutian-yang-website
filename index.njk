@@ -19,6 +19,66 @@
         x.style.textDecoration = 'none';
         x.style.color = $blue
       }
+
+      {% raw %}
+      var bibtex_piginet = `
+  @INPROCEEDINGS{yang2023piginet, 
+    AUTHOR    = {Zhutian  Yang AND Caelan R Garrett AND Lozano-P{\\'e}rez, Tom{\\'a}s AND Leslie Kaelbling AND Dieter Fox}, 
+    TITLE     = {{Sequence-Based Plan Feasibility Prediction for Efficient Task and Motion Planning}}, 
+    BOOKTITLE = {Proceedings of Robotics: Science and Systems}, 
+    YEAR      = {2023}, 
+    ADDRESS   = {Daegu, Republic of Korea}, 
+    MONTH     = {July}, 
+    DOI       = {10.15607/RSS.2023.XIX.061} 
+  } 
+      `;
+
+      var bibtex_diffusion_ccsp = `
+  @inproceedings{yang2023diffusion,
+    title={{Compositional Diffusion-Based Continuous Constraint Solvers}},
+    author={Yang, Zhutian and Mao, Jiayuan and Du, Yilun and Wu, Jiajun and Tenenbaum, Joshua B. and Lozano-P{\\'e}rez, Tom{\\'a}s and Kaelbling, Leslie Pack},
+    booktitle={Conference on Robot Learning},
+    year={2023},
+  }
+      `;
+      {% endraw %}
+      
+      // copy predefinedString once clicked
+      function copyPiginetToClipboard() {    
+          copyToClipboard(bibtex_piginet)
+      }
+      
+      function copyDiffusionCCSPToClipboard() {  
+          copyToClipboard(bibtex_diffusion_ccsp)
+      }
+
+      function copyedNotice() { 
+        // Show the notice and hide it after 2 seconds
+        const notice = document.getElementById("copynotice");
+        notice.classList.remove("hidden");
+        notice.style.opacity = "1";
+        setTimeout(() => {
+            notice.style.opacity = "0";
+            setTimeout(() => {
+                notice.classList.add("hidden");
+            }, 300);  // Wait for opacity transition to complete before hiding
+        }, 2000);
+      }
+
+      // copy predefinedString once clicked
+      function copyToClipboard(predefinedString) {    
+          // Create a temporary textarea to utilize the execCommand('copy') method
+          const tempTextArea = document.createElement("textarea");
+          document.body.appendChild(tempTextArea);
+          tempTextArea.value = predefinedString;
+          tempTextArea.select();
+          document.execCommand("copy");
+          document.body.removeChild(tempTextArea);
+
+          // alert("Text copied to clipboard: " + predefinedString);
+          copyedNotice();
+      }
+
     </script>
 
   </head>
@@ -72,6 +132,7 @@
     <p class="caption"> Figure: Robots learning to plan motion faster for rearrangement tasks </p> -->
 
     <h2>Publications</h2>
+    <div id="copynotice" class="hidden">Bibtex copied to clipboard!</div>
 
     <ul class="publications">
       {% for pub in publications %}
