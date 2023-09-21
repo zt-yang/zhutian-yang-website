@@ -5,6 +5,8 @@
 // This file is a JavaScript file that runs when the site is generated, which
 // lets us flexibly prepare the data and simplifies the template.
 
+'use strict';
+
 // These are my frequent collaborators, so let's use some variables:
 const yang = "Zhutian Yang";
 const caelan = "Caelan Reed Garrett";
@@ -50,8 +52,7 @@ function extraInfo(options) {
   var video = "video" in options ? options.video : "";
   var videosize = "videosize" in options ? options.videosize : [800, 440];
   var page = "page" in options ? options.page : "";
-  var mediaurl = "mediaurl" in options ? options.mediaurl : "";
-  var medianame = "medianame" in options ? options.medianame : "";
+  var media = "media" in options ? options.media : [];
   var bibtex = "bibtex" in options ? options.bibtex : "";
 
   if (shoutout !== "") {
@@ -69,7 +70,7 @@ function extraInfo(options) {
   if (demo !== "") {
     list.push(`<a href="${demo}" target="_blank">Video Demo</a>`)
   }
-  if (mediaurl !== "" && medianame !== "") {
+  for (const [medianame, mediaurl] of Object.entries(media)) {
     list.push(`<a href="${mediaurl}" target="_blank">${medianame}</a>`)
   }
   if (video !== "" && id !== "") {
@@ -120,8 +121,10 @@ module.exports = {
         id: "piginet",
         page: "https://piginet.github.io/",
         talk: "https://youtu.be/QXmcu9fVnak?t=23991",
-        mediaurl: "https://news.mit.edu/2023/ai-helps-household-robots-cut-planning-time-half-0714",
-        medianame: "MIT News",
+        media: {
+          "MIT News": "https://news.mit.edu/2023/ai-helps-household-robots-cut-planning-time-half-0714",
+          "Tech Crunch": "https://techcrunch.com/2023/07/07/mit-develops-a-motion-and-task-planning-system-for-home-robots/"
+        },
         shoutout: "&#128293; We also won Best Paper Runner-Up in CoRL 2022 Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning",
         poster: "https://drive.google.com/file/d/1cpzkM4o91fNaOBnwIM_-YC58Yt5vOHML/preview",
         postersize: [800, 440], // 1500×825
