@@ -45,6 +45,7 @@ function extraInfo(options) {
   var shoutout = "shoutout" in options ? options.shoutout : "";
   var talk = "talk" in options ? options.talk : "";
   var demo = "demo" in options ? options.demo : "";
+  var code = "code" in options ? options.code : "";
   var paper = "paper" in options ? options.paper : "";
   var id = "id" in options ? options.id : "";
   var poster = "poster" in options ? options.poster : "";
@@ -69,6 +70,9 @@ function extraInfo(options) {
   }
   if (demo !== "") {
     list.push(`<a href="${demo}" target="_blank">Video Demo</a>`)
+  }
+  if (code !== "") {
+    list.push(`<a href="${code}" target="_blank">Github</a>`)
   }
   for (const [medianame, mediaurl] of Object.entries(media)) {
     list.push(`<a href="${mediaurl}" target="_blank">${medianame}</a>`)
@@ -106,6 +110,7 @@ module.exports = {
       visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/corl23packing.gif?raw=true",
       extra: extraInfo({
         paper: "http://arxiv.org/abs/2309.00966",
+        code: "https://github.com/zt-yang/diffusion-ccsp",
         id: "diffusion-ccsp",
         page: "https://diffusion-ccsp.github.io/",
         bibtex: "copyDiffusionCCSPToClipboard"
@@ -118,6 +123,7 @@ module.exports = {
       visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/rss23kitchens.gif?raw=true",
       extra: extraInfo({
         paper: "https://arxiv.org/abs/2211.01576",
+        code: "https://github.com/Learning-and-Intelligent-Systems/kitchen-worlds/tree/main",
         id: "piginet",
         page: "https://piginet.github.io/",
         talk: "https://youtu.be/QXmcu9fVnak?t=23991",
