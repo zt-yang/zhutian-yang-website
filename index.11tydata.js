@@ -65,14 +65,14 @@ function extraInfo(options) {
   if (page !== "") {
     list.push(`<a href="${page}" target="_blank">Project Page</a>`)
   }
+  if (code !== "") {
+    list.push(`<a href="${code}" target="_blank">Github</a>`)
+  }
   if (talk !== "") {
     list.push(`<a href="${talk}" target="_blank">Talk</a>`)
   }
   if (demo !== "") {
     list.push(`<a href="${demo}" target="_blank">Video Demo</a>`)
-  }
-  if (code !== "") {
-    list.push(`<a href="${code}" target="_blank">Github</a>`)
   }
   for (const [medianame, mediaurl] of Object.entries(media)) {
     list.push(`<a href="${mediaurl}" target="_blank">${medianame}</a>`)
