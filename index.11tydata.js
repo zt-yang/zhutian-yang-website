@@ -113,7 +113,13 @@ module.exports = {
         code: "https://github.com/zt-yang/diffusion-ccsp",
         id: "diffusion-ccsp",
         page: "https://diffusion-ccsp.github.io/",
-        bibtex: "copyDiffusionCCSPToClipboard"
+        talk: "https://youtu.be/mhtYU7IevtE",
+        bibtex: "copyDiffusionCCSPToClipboard",
+        media: {
+          "MIT News": "https://news.mit.edu/2023/new-technique-helps-robots-pack-objects-tight-space-1017",
+        },
+        poster: "https://drive.google.com/file/d/1uKmcsuBO0D5o5QrXBCKQfx4cPTTJ8mGv/preview",
+        postersize: [800, 600], // 2880x2160
       })
     },
     {
