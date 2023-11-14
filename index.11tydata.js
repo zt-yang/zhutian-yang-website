@@ -68,6 +68,10 @@ function extraInfo(options) {
   if (code !== "") {
     list.push(`<a href="${code}" target="_blank">Github</a>`)
   }
+  if (bibtex !== "") {
+    list.push(`<a class="buttona" onclick="${bibtex}();">Bibtex</a>`)
+    // list.push(`<a class="buttona" onclick="copyToClipboard(${bibtex});">Bibtex</a>`)
+  }
   if (talk !== "") {
     list.push(`<a href="${talk}" target="_blank">Talk</a>`)
   }
@@ -88,10 +92,6 @@ function extraInfo(options) {
     <span id="hide${id}" class="posterbutton" style="display:none" onclick="document.getElementById('${id}').style.display='none'; document.getElementById('hide${id}').style.display='none'; document.getElementById('show${id}').style.display='inline'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)"">Poster (click to hide)</span>
     <iframe class="posterlink" id="${id}" src="${poster}" style="display:none;" width="${postersize[0]}px"
     height="${postersize[1]}px" allow="autoplay"></iframe>`)
-  }
-  if (bibtex !== "") {
-    list.push(`<a class="buttona" onclick="${bibtex}();">Bibtex</a>`)
-    // list.push(`<a class="buttona" onclick="copyToClipboard(${bibtex});">Bibtex</a>`)
   }
   return line + list.join("&nbsp;&nbsp;<i>/</i>&nbsp;&nbsp;");
 }
