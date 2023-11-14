@@ -97,7 +97,7 @@ function extraInfo(options) {
 }
 
 module.exports = {
-  name: "Zhutian Yang",
+  name: "Zhutian (Skye) Yang",
   email: "ztyang {at} mit {dot} edu",
   twitter: "https://twitter.com/ZhutianYang_",
   linkedin: "https://www.linkedin.com/in/zhutian-yang/",
