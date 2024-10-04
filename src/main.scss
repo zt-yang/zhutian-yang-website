@@ -63,7 +63,7 @@ td {
 
 .bio {
     padding-right: 2.5%;
-    width: 63%;
+    width: 65%;
     vertical-align: center;
 }
 
@@ -86,7 +86,7 @@ td {
     height: auto;
     max-width: 100%;
     position: absolute;
-    top: 85px;
+    top: 160px;
     left: 0;
     transition: opacity 0.3s ease; /* Smooth transition effect */
 }
@@ -113,6 +113,36 @@ td {
     color: $blue;
 }
 
+.at-nvidia {
+    background-color: #76B900; /* green */
+}
+
+.at-mit {
+    background-color: #F5B21F; /* yellow */
+}
+
+.at-tri {
+    background-color: #ed1b2f; /* red */
+}
+
+.project {
+    font-weight: bold;
+    color: white !important;
+    /* background-color: #3498db; */
+    border-radius: 6px;
+    padding: 2pt 4pt;
+    margin-right: 2pt;
+    font-size: 10pt;
+}
+
+.project img {
+    max-height: 15px;
+    padding-right: 5px;
+    width: auto;
+    position: relative;
+    top: 2px;
+}
+
 .pub p {
     line-height: 1;
 }
@@ -120,6 +150,15 @@ td {
 ul {
     padding-left: 0;
 }
+
+.parent-list {
+    padding-left: 20px;
+}
+
+.child-list {
+    padding-left: 20px;
+}
+
 
 .publications li {
     list-style-type: "";
