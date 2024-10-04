@@ -23,6 +23,39 @@ h3 {
   line-height: 1.2;
 }
 
+/* Hide the mobile-photos by default */
+.mobile-photos {
+  display: none;
+}
+
+/* On small screens (phones), show the mobile-photos and hide the photo-column */
+@media screen and (max-width: 768px) {
+  /* Show the images above the table */
+  .mobile-photos {
+    display: block;
+    width: 60%;
+    padding-left: 16%;
+    margin: 15px;
+    /* Add some space between the images and the table */
+  }
+
+  /* Force hide the table's photo column */
+  table .photo-column {
+    display: none !important;
+  }
+
+  body {
+    margin: 40px 20px !important;
+  }
+
+  .columnimg {
+    width: 100% !important;
+  }
+
+  .columntext {
+    width: 96% !important;
+  }
+}
 table {
   width: 100%;
   max-width: 100%;
@@ -68,14 +101,14 @@ td {
 }
 
 .bio {
-  padding-right: 2.5%;
+  /* padding-right: 2.5%; */
   width: 65%;
   vertical-align: center;
 }
 
 /*
 .photo {
-    padding-left: 2.5%;
+    padding-left: 5%;
     width: 30%;
     max-width: 30%;
 }
@@ -151,6 +184,16 @@ td {
   font-size: 10pt;
 }
 
+/*
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+span.project:hover {
+    cursor: pointer;
+    transform: scale(1.05); 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); 
+}
+ */
 .project img {
   max-height: 15px;
   padding-right: 5px;
