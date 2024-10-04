@@ -79,7 +79,6 @@ td {
     padding-left: 2.5%;
     position: relative;
     width: 30%; /* Both images will occupy 30% of the container */
-    top: 85px;
 }
 
 .photo img {
@@ -87,7 +86,7 @@ td {
     height: auto;
     max-width: 100%;
     position: absolute;
-    top: 0;
+    top: 85px;
     left: 0;
     transition: opacity 0.3s ease; /* Smooth transition effect */
 }
