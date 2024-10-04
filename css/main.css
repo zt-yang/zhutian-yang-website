@@ -61,33 +61,44 @@ td {
   vertical-align: center;
 }
 
+/*
+.photo {
+    padding-left: 2.5%;
+    width: 30%;
+    max-width: 30%;
+}
+*/
 .photo {
   padding-left: 2.5%;
+  position: relative;
   width: 30%;
-  max-width: 30%;
+  /* Both images will occupy 30% of the container */
 }
 
 .photo img {
   width: 100%;
+  height: auto;
+  max-width: 100%;
+  position: absolute;
+  top: 85px;
+  left: 0;
   transition: opacity 0.3s ease;
   /* Smooth transition effect */
 }
 
 .photo img.hover-img {
-  position: absolute;
-  top: 0;
-  left: 0;
   opacity: 0;
-  transition: opacity 0.3s ease;
-  /* Smooth transition effect */
-}
-
-.photo:hover img {
-  opacity: 0;
+  /* Hide hover image by default */
 }
 
 .photo:hover img.hover-img {
   opacity: 1;
+  /* Show hover image on hover */
+}
+
+.photo:hover img.default-img {
+  opacity: 0;
+  /* Hide original image on hover */
 }
 
 .self-author {
