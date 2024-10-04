@@ -120,7 +120,7 @@ module.exports = {
         //   "MIT News": "https://news.mit.edu/2023/ai-helps-household-robots-cut-planning-time-half-0714",
         //   "Tech Crunch": "https://techcrunch.com/2023/07/07/mit-develops-a-motion-and-task-planning-system-for-home-robots/"
         // },
-        // shoutout: "&#128293; We also won Best Paper Runner-Up in CoRL 2022 Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning",
+        // shoutout: "&#128293; We won Best Paper Runner-Up in CoRL 2022 Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning",
         // poster: "https://drive.google.com/file/d/1cpzkM4o91fNaOBnwIM_-YC58Yt5vOHML/preview",
         // postersize: [800, 440], // 1500×825
         bibtex: "copyVLMTAMPToClipboard"
@@ -160,7 +160,7 @@ module.exports = {
           "MIT News": "https://news.mit.edu/2023/ai-helps-household-robots-cut-planning-time-half-0714",
           "Tech Crunch": "https://techcrunch.com/2023/07/07/mit-develops-a-motion-and-task-planning-system-for-home-robots/"
         },
-        shoutout: "&#128293; We also won Best Paper Runner-Up in CoRL 2022 Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning",
+        shoutout: "&#128293; We won Best Paper Runner-Up in CoRL 2022 Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning",
         poster: "https://drive.google.com/file/d/1cpzkM4o91fNaOBnwIM_-YC58Yt5vOHML/preview",
         postersize: [800, 440], // 1500×825
         bibtex: "copyPiginetToClipboard"
