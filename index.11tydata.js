@@ -103,6 +103,7 @@ module.exports = {
   linkedin: "https://www.linkedin.com/in/zhutian-yang/",
   github: "https://github.com/zt-yang",
   scholar: "https://scholar.google.com/citations?user=vW5LLmUAAAAJ&hl=en",
+  youtube: "https://cap.csail.mit.edu/engage/spotlights/zhutian-yang?utm_source=linkedin&utm_medium=social&utm_campaign=zhutianspot24",
   resume: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/ztyang-CV-2024.pdf?raw=true",
   publications: [
     {
