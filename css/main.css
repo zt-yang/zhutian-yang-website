@@ -153,11 +153,20 @@ ul {
 }
 
 .parent-list {
+  margin-top: 5px;
   padding-left: 20px;
+}
+
+.parent-list li {
+  padding-top: 10px;
 }
 
 .child-list {
   padding-left: 20px;
+}
+
+.child-list li {
+  padding-top: 0px;
 }
 
 .publications li {
