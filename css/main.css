@@ -67,6 +67,29 @@ td {
   max-width: 30%;
 }
 
+.photo img {
+  width: 100%;
+  transition: opacity 0.3s ease;
+  /* Smooth transition effect */
+}
+
+.photo img.hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  /* Smooth transition effect */
+}
+
+.photo:hover img {
+  opacity: 0;
+}
+
+.photo:hover img.hover-img {
+  opacity: 1;
+}
+
 .self-author {
   font-weight: 600;
 }
