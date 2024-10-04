@@ -52,9 +52,17 @@ table {
 .logo {
     width: 30px;
     margin-left: 5px;
-  margin-right: 5px;
-  border-radius: 6px;
+    margin-right: 5px;
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
+
+a img.logo:hover {
+    cursor: pointer; /* Ensures pointer on hover */
+    transform: scale(1.05); /* Slightly enlarges the image */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle drop shadow */
+}
+
 
 table,
 tr,
