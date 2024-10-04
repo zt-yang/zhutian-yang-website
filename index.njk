@@ -41,15 +41,29 @@
     year={2023},
   }
       `;
+
+      var bibtex_vlm_tamp = `
+  @misc{yang2024guidinglonghorizontaskmotion,
+      title={Guiding Long-Horizon Task and Motion Planning with Vision Language Models}, 
+      author={Zhutian Yang and Caelan Garrett and Dieter Fox and Tomás Lozano-Pérez and Leslie Pack Kaelbling},
+      year={2024},
+      eprint={2410.02193},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2410.02193}, 
+}
+      `;
       {% endraw %}
       
       // copy predefinedString once clicked
       function copyPiginetToClipboard() {    
           copyToClipboard(bibtex_piginet)
       }
-      
       function copyDiffusionCCSPToClipboard() {  
           copyToClipboard(bibtex_diffusion_ccsp)
+      }
+      function copyVLMTAMPToClipboard() {    
+          copyToClipboard(bibtex_vlm_tamp)
       }
 
       function copyedNotice() { 
@@ -99,8 +113,11 @@
               <a href="{{github}}" target="_blank">
                 <img class="logo" src="https://github.com/zt-yang/zhutian-yang-website/blob/main/img/github-icon.png?raw=true">
               </a>
+              <a href="{{scholar}}" target="_blank">
+                <img class="logo" src="https://github.com/zt-yang/zhutian-yang-website/blob/main/img/scholar-icon.png?raw=true">
+              </a>
             </div>
-            <p>Hello! My name is Skye and I'm a PhD candidate at MIT working on robot learning and robot planning for long-horizon mobile manipulation problems. I'm co-advised by Leslie Pack Kaelbling and Tomás Lozano-Pérez in the <a href="https://lis.csail.mit.edu/">Learning and Intelligent Systems group</a>. I'm currently a part-time research intern at <a href="https://research.nvidia.com/labs/srl/">NVIDIA Seattle Robotics Lab</a>, working with Dieter Fox. I obtained bachelor's degree in information engineering and media at NTU, Singapore.</p>
+            <p>Hello! My name is Skye and I'm a final-year PhD student at MIT working on robot learning and planning for long-horizon mobile manipulation problems. I'm co-advised by Leslie Pack Kaelbling and Tomás Lozano-Pérez in the <a href="https://lis.csail.mit.edu/">Learning and Intelligent Systems group</a>. I'm currently a part-time research intern at <a href="https://www.tri.global/our-work/robotics">Toyota Research Institute</a>, Robotics division,  Large Behavior Model team. I was an ex-<a href="https://research.nvidia.com/labs/srl/">NVIDIA</a> intern in the Seattle Robotics Lab. I obtained bachelor's degree in information engineering and media at NTU, Singapore.</p>
           </td>
           <td class="photo">
             <img src="https://raw.githubusercontent.com/zt-yang/zhutian-yang-website/main/img/zhutianyang.jpg?token=GHSAT0AAAAAABZLZPSEQFWPM4YB67NHZED4Y3CZFKQ" width="100%">
@@ -111,10 +128,10 @@
 
 
     <h2>Research</h2>
-    Household robots planning long-horizon behavior, such as unpacking grocery bags and heating up the takeouts, must be able to <b>plan quickly and execute robustly</b> in <b>semantically rich, geometrically complex environments</b>. I'm working on the following problems in the field of robot learning and planning:
+    Robots planning long-horizon behavior, such as unpacking grocery bags and heating up the takeouts, must be able to <b>plan quickly and execute robustly</b> in <b>semantically rich, geometrically complex environments</b>. I've worked on the following problems in the field of robot learning and planning:
     <ul>
-      <li> Compose diffusion policies and RL-trained policies for multi-step mobile rearrangement problems. </li>
-      <li> Plan with information provided by pre-trained vision-language models. </li>
+      <li> Chain imitation learned policies for multi-step mobile rearrangement problems. </li>
+      <li> Solve long-horizon manipulation problems given any robot embodiment by combining the geometric reasoning ability of TAMP and common-sense knowledge provided by pre-trained vision-language models. </li>
       <li> Learn to plan for motion while satisfacing geometric collision-free, physical stability, and data-defined spatial constraints (e.g. packing non-convex objects in boxes). </li>
       <li> Learn to predict task plan feasibility from images of worlds with articulated and movable obstacles. </li>
       <li> Hierarchical planning and replanning in partially observable Task and Motion Planning problems. </li>

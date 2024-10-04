@@ -102,7 +102,29 @@ module.exports = {
   twitter: "https://twitter.com/ZhutianYang_",
   linkedin: "https://www.linkedin.com/in/zhutian-yang/",
   github: "https://github.com/zt-yang",
+  scholar: "https://scholar.google.com/citations?user=vW5LLmUAAAAJ&hl=en",
   publications: [
+    {
+      title: "Guiding Long-Horizon Task and Motion Planning with Vision Language Models",
+      authors: authorList([ yang, caelan, lpk, tlp, dieter ]),
+      conference: "In Submission",
+      visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/vlmtamp.gif?raw=true",
+      extra: extraInfo({
+        paper: "http://arxiv.org/abs/2410.02193",
+        // code: "https://github.com/Learning-and-Intelligent-Systems/kitchen-worlds/tree/main",
+        id: "vlmtamp",
+        page: "https://zt-yang.github.io/vlm-tamp-robot/",
+        talk: "https://youtu.be/1JDua3opFuM",
+        // media: {
+        //   "MIT News": "https://news.mit.edu/2023/ai-helps-household-robots-cut-planning-time-half-0714",
+        //   "Tech Crunch": "https://techcrunch.com/2023/07/07/mit-develops-a-motion-and-task-planning-system-for-home-robots/"
+        // },
+        // shoutout: "&#128293; We also won Best Paper Runner-Up in CoRL 2022 Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning",
+        // poster: "https://drive.google.com/file/d/1cpzkM4o91fNaOBnwIM_-YC58Yt5vOHML/preview",
+        // postersize: [800, 440], // 1500×825
+        bibtex: "copyVLMTAMPToClipboard"
+      })
+    },
     {
       title: "Compositional Diffusion-Based Continuous Constraint Solvers",
       authors: authorList([ yang, jiayuan, yilun, jiajun, jbt, tlp, lpk]),
