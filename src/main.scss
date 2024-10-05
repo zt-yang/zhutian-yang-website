@@ -211,6 +211,16 @@ td {
     color: $red;
 }
 
+a:hover {
+    color: $darkyellow;
+    cursor: pointer;
+}
+
+.highlightable:hover {
+    color: $darkyellow;
+    cursor: pointer;
+}
+
 ul {
     padding-left: 0;
 }
@@ -225,6 +235,7 @@ ul {
 }
 
 .child-list {
+    padding-top: 4px;
     padding-left: 20px;
 }
 
@@ -289,10 +300,6 @@ ul {
   opacity: 0;
 }
 
-.highlightable:hover {
-    color: $darkyellow;
-    cursor: pointer;
-}
 
 .columnimg:hover .default-img {
   opacity: 0;
