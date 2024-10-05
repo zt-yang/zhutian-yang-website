@@ -57,43 +57,43 @@ function extraInfo(options) {
   var bibtex = "bibtex" in options ? options.bibtex : "";
 
   if (shoutout !== "") {
-    line = `<p style="color: grey"><i>${shoutout}</i></p>`
+    line = `<p class="highlightable" style="color: grey"><i>${shoutout}</i></p>`
   }
   if (paper !== "") {
-    list.push(`<a href="${paper}" target="_blank">Paper</a>`)
+    list.push(`<a class="highlightable" href="${paper}" target="_blank">Paper</a>`)
   }
   if (page !== "") {
-    list.push(`<a href="${page}" target="_blank">Project Page</a>`)
+    list.push(`<a class="highlightable" href="${page}" target="_blank">Project Page</a>`)
   }
   if (code !== "") {
-    list.push(`<a href="${code}" target="_blank">Github</a>`)
+    list.push(`<a class="highlightable" href="${code}" target="_blank">Code</a>`)
   }
   if (bibtex !== "") {
-    list.push(`<a class="buttona" onclick="${bibtex}();">Bibtex</a>`)
+    list.push(`<a class="highlightable buttona" onclick="${bibtex}();">Bibtex</a>`)
     // list.push(`<a class="buttona" onclick="copyToClipboard(${bibtex});">Bibtex</a>`)
   }
   if (talk !== "") {
-    list.push(`<a href="${talk}" target="_blank">Talk</a>`)
+    list.push(`<a class="highlightable" href="${talk}" target="_blank">Talk</a>`)
   }
   if (demo !== "") {
-    list.push(`<a href="${demo}" target="_blank">Video Demo</a>`)
+    list.push(`<a class="highlightable" href="${demo}" target="_blank">Video Demo</a>`)
   }
   for (const [medianame, mediaurl] of Object.entries(media)) {
-    list.push(`<a href="${mediaurl}" target="_blank">${medianame}</a>`)
+    list.push(`<a class="highlightable" href="${mediaurl}" target="_blank">${medianame}</a>`)
   }
   if (video !== "" && id !== "") {
-    list.push(`<span id="showvid${id}" class="posterbutton"  onclick="document.getElementById('vid${id}').style.display='block'; document.getElementById('hidevid${id}').style.display='inline'; document.getElementById('showvid${id}').style.display='none'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)">Video (click to show)</span>
-    <span id="hidevid${id}" class="posterbutton" style="display:none" onclick="document.getElementById('vid${id}').style.display='none'; document.getElementById('hidevid${id}').style.display='none'; document.getElementById('showvid${id}').style.display='inline'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)"">Video (click to hide)</span>
+    list.push(`<span id="showvid${id}" class="highlightable posterbutton"  onclick="document.getElementById('vid${id}').style.display='block'; document.getElementById('hidevid${id}').style.display='inline'; document.getElementById('showvid${id}').style.display='none'"  onmouseout="normalSpan(this)">Video (click to show)</span>
+    <span id="hidevid${id}" class="highlightable posterbutton" style="display:none" onclick="document.getElementById('vid${id}').style.display='none'; document.getElementById('hidevid${id}').style.display='none'; document.getElementById('showvid${id}').style.display='inline'"  onmouseout="normalSpan(this)"">Video (click to hide)</span>
     <iframe class="posterlink" frameborder="0" id="vid${id}" src="${video}" style="display:none;" width="${videosize[0]}px"
     height="${videosize[1]}px" allow="autoplay"></iframe>`)
   }
   if (poster !== "" && id !== "") {
-    list.push(`<span id="show${id}" class="posterbutton"  onclick="document.getElementById('${id}').style.display='block'; document.getElementById('hide${id}').style.display='inline'; document.getElementById('show${id}').style.display='none'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)">Poster (click to show)</span>
-    <span id="hide${id}" class="posterbutton" style="display:none" onclick="document.getElementById('${id}').style.display='none'; document.getElementById('hide${id}').style.display='none'; document.getElementById('show${id}').style.display='inline'"  onmouseover="underlineSpan(this)" onmouseout="normalSpan(this)"">Poster (click to hide)</span>
+    list.push(`<span id="show${id}" class="highlightable posterbutton"  onclick="document.getElementById('${id}').style.display='block'; document.getElementById('hide${id}').style.display='inline'; document.getElementById('show${id}').style.display='none'" onmouseout="normalSpan(this)">Poster (click to show)</span>
+    <span id="hide${id}" class="highlightable posterbutton" style="display:none" onclick="document.getElementById('${id}').style.display='none'; document.getElementById('hide${id}').style.display='none'; document.getElementById('show${id}').style.display='inline'"   onmouseout="normalSpan(this)"">Poster (click to hide)</span>
     <iframe class="posterlink" id="${id}" src="${poster}" style="display:none;" width="${postersize[0]}px"
     height="${postersize[1]}px" allow="autoplay"></iframe>`)
   }
-  return line + list.join("&nbsp;&nbsp;<i>/</i>&nbsp;&nbsp;");
+  return line + list.join("&nbsp;&nbsp;|&nbsp;&nbsp;");
 }
 
 module.exports = {
@@ -109,14 +109,16 @@ module.exports = {
   publications: [
     {
       title: "Guiding Long-Horizon Task and Motion Planning with Vision Language Models",
+      page: "https://zt-yang.github.io/vlm-tamp-robot",
       authors: authorList([ yang, caelan, lpk, tlp, dieter ]),
       conference: "In Submission",
       visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/vlmtamp.gif?raw=true",
+      visual2: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/icra25method.png?raw=true",
       extra: extraInfo({
         paper: "http://arxiv.org/abs/2410.02193",
         // code: "https://github.com/Learning-and-Intelligent-Systems/kitchen-worlds/tree/main",
         id: "vlmtamp",
-        page: "https://zt-yang.github.io/vlm-tamp-robot/",
+        page: "https://zt-yang.github.io/vlm-tamp-robot",
         talk: "https://youtu.be/1JDua3opFuM",
         // media: {
         //   "MIT News": "https://news.mit.edu/2023/ai-helps-household-robots-cut-planning-time-half-0714",
@@ -130,9 +132,11 @@ module.exports = {
     },
     {
       title: "Compositional Diffusion-Based Continuous Constraint Solvers",
+      page: "https://diffusion-ccsp.github.io/",
       authors: authorList([ yang, jiayuan, yilun, jiajun, jbt, tlp, lpk]),
       conference: "CoRL 2023",
       visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/corl23packing.gif?raw=true",
+      visual2: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/corl23method.gif?raw=true",
       extra: extraInfo({
         paper: "http://arxiv.org/abs/2309.00966",
         code: "https://github.com/zt-yang/diffusion-ccsp",
@@ -149,9 +153,11 @@ module.exports = {
     },
     {
       title: "Sequence-Based Plan Feasibility Prediction for Efficient Task and Motion Planning",
+      page: "https://piginet.github.io/",
       authors: authorList([ yang, caelan, lpk, tlp, dieter ]),
       conference: "RSS 2023",
       visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/rss23kitchens.gif?raw=true",
+      visual2: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/rss23method.png?raw=true",
       extra: extraInfo({
         paper: "https://arxiv.org/abs/2211.01576",
         code: "https://github.com/Learning-and-Intelligent-Systems/kitchen-worlds/tree/main",
@@ -170,9 +176,11 @@ module.exports = {
     },
     {
       title: "Let’s Handle It: Generalizable Manipulation of Articulated Objects",
+      page: "",
       authors: authorList([ yang, aidan ]),
       conference: "ICRL 2022 Workshop on Generalizable Policy Learning in the Physical World",
       visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/iclr22cover_cropped.jpg?raw=true",
+      visual2: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/iclr22cover_cropped.jpg?raw=true",
       extra: extraInfo({
         paper: "https://openreview.net/pdf?id=SObVnEp4yb9",
         id: "maniskill",
@@ -183,9 +191,11 @@ module.exports = {
     },
     {
       title: "Flexibly Instructable Robots",
+      page: "",
       authors: authorList([ yang, patrick, hsu ]),
       conference: "Undergraduate thesis work; Also appeared in Advances in Cognitive Systems 2019 and DSpace@MIT",
       visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/robochef19cover.png?raw=true",
+      visual2: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/robochef19cover.png?raw=true",
       extra: extraInfo({
         paper: "https://dspace.mit.edu/handle/1721.1/119668",
         id: "robotchef",

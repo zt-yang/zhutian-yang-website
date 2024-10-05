@@ -199,15 +199,17 @@
       {% for pub in publications %}
       <div class="row">
         <div class="columnimg">
-          <img class="figure" src="{{ pub.visual }}">
+          <img class="figure default-img" src="{{ pub.visual }}">
+          <img class="figure hover-img" src="{{ pub.visual2 }}">
         </div>
         <div class="columntext">
 
             <li class="pub">
               <p>
-                <span class="pub-title">{{ pub.title }}</span></p>
+                <a href="{{ pub.page }}" target="_blank" class="highlightable pub-title">{{ pub.title }}</a>
+              </p>
               <p>{{ pub.authors | safe }}</p>
-              <p><i>{{ pub.conference }}</i></p>
+              <p class="conference"><i>{{ pub.conference }}</i></p>
               <p>{{ pub.extra | safe }}</p>
             </li>
 

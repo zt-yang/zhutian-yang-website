@@ -1,5 +1,9 @@
 $blue: #3498db;
 $darkblue: #2980b9;
+$yellow: #F5B21F;
+$darkyellow: #f39c12;
+$green: #76B900;
+$red: #ed1b2f;
 @mixin bold {
     font-weight: 600;
 }
@@ -106,7 +110,7 @@ td {
 }
 
 .bio {
-    /* padding-right: 2.5%; */
+    padding-right: 2.5% ! important;
     width: 65%;
     vertical-align: center;
 }
@@ -157,20 +161,21 @@ td {
 
 .pub-title {
     font-size: 1.17em;
+    line-height: 1.3em;
     @include bold;
     color: $blue;
 }
 
 .at-nvidia {
-    background-color: #76B900; /* green */
+    background-color: $green;
 }
 
 .at-mit {
-    background-color: #F5B21F; /* yellow */
+    background-color: $yellow;
 }
 
 .at-tri {
-    background-color: #ed1b2f; /* red */
+    background-color: $red; 
 }
 
 .project {
@@ -181,17 +186,13 @@ td {
     padding: 2pt 4pt;
     margin-right: 2pt;
     font-size: 10pt;
-}
-/*
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-span.project:hover {
-    cursor: pointer;
-    transform: scale(1.05); 
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); 
+.project:hover {
+    transform: scale(1.05); /* Increase size */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Drop shadow */
 }
- */
 
 .project img {
     max-height: 15px;
@@ -202,7 +203,12 @@ span.project:hover {
 }
 
 .pub p {
-    line-height: 1;
+    line-height: 1.2em;
+    margin: 8px auto;
+}
+
+.conference {
+    color: $red;
 }
 
 ul {
@@ -248,6 +254,7 @@ ul {
   width: 27%;
   padding: 0px;
   padding-left: 0px;
+  position: relative;
 }
 
 .columntext {
@@ -259,9 +266,40 @@ ul {
 }
 
 .figure {
-  padding-top: 20px;
+  padding-top: 14px;
   width: 100%;
   height: 100%;
+}
+
+.default-img, 
+.hover-img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.default-img {
+  opacity: 1;
+}
+
+.hover-img {
+  opacity: 0;
+}
+
+.highlightable:hover {
+    color: $darkyellow;
+    cursor: pointer;
+}
+
+.columnimg:hover .default-img {
+  opacity: 0;
+}
+
+.columnimg:hover .hover-img {
+  opacity: 1;
 }
 
 /* Clear floats after the columns */
