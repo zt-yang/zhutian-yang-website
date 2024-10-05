@@ -55,6 +55,14 @@ h3 {
   .columntext {
     width: 96% !important;
   }
+
+  .default-img {
+    position: relative !important;
+  }
+
+  .hover-img {
+    display: none !important;
+  }
 }
 table {
   width: 100%;
