@@ -140,7 +140,7 @@ module.exports = {
       visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/research/icra25popi.gif?raw=true",
       visual2: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/research/icra25popimethod.png?raw=true",
       extra: extraInfo({
-        // paper: "http://arxiv.org/abs/2410.02193",
+        paper: "https://arxiv.org/abs/2410.06911",
         // code: "https://github.com/Learning-and-Intelligent-Systems/kitchen-worlds/tree/main",
         id: "popi",
         page: "https://yravan.github.io/plannerorderedpolicy",
@@ -152,7 +152,7 @@ module.exports = {
         // shoutout: "&#128293; We won Best Paper Runner-Up in CoRL 2022 Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning",
         // poster: "https://drive.google.com/file/d/1cpzkM4o91fNaOBnwIM_-YC58Yt5vOHML/preview",
         // postersize: [800, 440], // 1500×825
-        // bibtex: "copyVLMTAMPToClipboard"
+        bibtex: "copyPopiToClipboard"
       })
     },
     {

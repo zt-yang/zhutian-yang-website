@@ -53,6 +53,18 @@
       url={https://arxiv.org/abs/2410.02193}, 
 }
       `;
+
+      var bibtex_popi = `
+  @misc{ravan2024combiningplanningdiffusionmobility,
+      title={Combining Planning and Diffusion for Mobility with Unknown Dynamics}, 
+      author={Yajvan Ravan and Zhutian Yang and Tao Chen and Tomás Lozano-Pérez and Leslie Pack Kaelbling},
+      year={2024},
+      eprint={2410.06911},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2410.06911}, 
+}
+      `;
       {% endraw %}
       
       // copy predefinedString once clicked
@@ -64,6 +76,9 @@
       }
       function copyVLMTAMPToClipboard() {    
           copyToClipboard(bibtex_vlm_tamp)
+      }
+      function copyPopiToClipboard() {    
+          copyToClipboard(bibtex_popi)
       }
 
       function copyedNotice() { 
