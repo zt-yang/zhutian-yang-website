@@ -133,8 +133,8 @@ module.exports = {
       })
     },
     {
-      title: "Guiding Long-Horizon Task and Motion Planning with Vision Language Models",
-      page: "https://zt-yang.github.io/vlm-tamp-robot",
+      title: "Combining Planning and Diffusion for Mobility with Unknown Dynamics",
+      page: "https://yravan.github.io/plannerorderedpolicy",
       authors: authorList([ yajvan, yang, tao, lpk, tlp ]),
       conference: "In Submission",
       visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/research/icra25popi.gif?raw=true",
@@ -143,7 +143,7 @@ module.exports = {
         // paper: "http://arxiv.org/abs/2410.02193",
         // code: "https://github.com/Learning-and-Intelligent-Systems/kitchen-worlds/tree/main",
         id: "popi",
-        page: "https://yravan.github.io/plannerorderedpolicy/",
+        page: "https://yravan.github.io/plannerorderedpolicy",
         // talk: "https://youtu.be/1JDua3opFuM",
         // media: {
         //   "MIT News": "https://news.mit.edu/2023/ai-helps-household-robots-cut-planning-time-half-0714",
