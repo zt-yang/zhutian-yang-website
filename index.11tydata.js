@@ -20,6 +20,8 @@ const jiayuan = "Jiayuan Mao"
 const jiajun = "Jiajun Wu"
 const yilun = "Yilun Du"
 const jbt = "Joshua Brett Tenenbaum"
+const yajvan = "Yajvan Ravan"
+const tao = "Tao Chen"
 
 
 // authorList generates the HTML for the author list from a JS array
@@ -112,8 +114,8 @@ module.exports = {
       page: "https://zt-yang.github.io/vlm-tamp-robot",
       authors: authorList([ yang, caelan, lpk, tlp, dieter ]),
       conference: "In Submission",
-      visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/vlmtamp.gif?raw=true",
-      visual2: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/icra25method.png?raw=true",
+      visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/research/icra25vlmtamp.gif?raw=true",
+      visual2: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/research/icra25method.png?raw=true",
       extra: extraInfo({
         paper: "http://arxiv.org/abs/2410.02193",
         // code: "https://github.com/Learning-and-Intelligent-Systems/kitchen-worlds/tree/main",
@@ -131,12 +133,35 @@ module.exports = {
       })
     },
     {
+      title: "Guiding Long-Horizon Task and Motion Planning with Vision Language Models",
+      page: "https://zt-yang.github.io/vlm-tamp-robot",
+      authors: authorList([ yajvan, yang, tao, lpk, tlp ]),
+      conference: "In Submission",
+      visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/research/icra25popi.gif?raw=true",
+      visual2: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/research/icra25popimethod.png?raw=true",
+      extra: extraInfo({
+        // paper: "http://arxiv.org/abs/2410.02193",
+        // code: "https://github.com/Learning-and-Intelligent-Systems/kitchen-worlds/tree/main",
+        id: "popi",
+        page: "https://yravan.github.io/plannerorderedpolicy/",
+        // talk: "https://youtu.be/1JDua3opFuM",
+        // media: {
+        //   "MIT News": "https://news.mit.edu/2023/ai-helps-household-robots-cut-planning-time-half-0714",
+        //   "Tech Crunch": "https://techcrunch.com/2023/07/07/mit-develops-a-motion-and-task-planning-system-for-home-robots/"
+        // },
+        // shoutout: "&#128293; We won Best Paper Runner-Up in CoRL 2022 Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning",
+        // poster: "https://drive.google.com/file/d/1cpzkM4o91fNaOBnwIM_-YC58Yt5vOHML/preview",
+        // postersize: [800, 440], // 1500×825
+        // bibtex: "copyVLMTAMPToClipboard"
+      })
+    },
+    {
       title: "Compositional Diffusion-Based Continuous Constraint Solvers",
       page: "https://diffusion-ccsp.github.io/",
       authors: authorList([ yang, jiayuan, yilun, jiajun, jbt, tlp, lpk]),
       conference: "CoRL 2023",
-      visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/corl23packing.gif?raw=true",
-      visual2: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/corl23method.gif?raw=true",
+      visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/research/corl23packing.gif?raw=true",
+      visual2: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/research/corl23method.gif?raw=true",
       extra: extraInfo({
         paper: "http://arxiv.org/abs/2309.00966",
         code: "https://github.com/zt-yang/diffusion-ccsp",
@@ -156,8 +181,8 @@ module.exports = {
       page: "https://piginet.github.io/",
       authors: authorList([ yang, caelan, lpk, tlp, dieter ]),
       conference: "RSS 2023",
-      visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/rss23kitchens.gif?raw=true",
-      visual2: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/rss23method.png?raw=true",
+      visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/research/rss23kitchens.gif?raw=true",
+      visual2: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/research/rss23method.png?raw=true",
       extra: extraInfo({
         paper: "https://arxiv.org/abs/2211.01576",
         code: "https://github.com/Learning-and-Intelligent-Systems/kitchen-worlds/tree/main",
@@ -179,8 +204,8 @@ module.exports = {
       page: "",
       authors: authorList([ yang, aidan ]),
       conference: "ICRL 2022 Workshop on Generalizable Policy Learning in the Physical World",
-      visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/iclr22cover_cropped.jpg?raw=true",
-      visual2: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/iclr22cover_cropped.jpg?raw=true",
+      visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/research/iclr22cover_cropped.jpg?raw=true",
+      visual2: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/research/iclr22cover_cropped.jpg?raw=true",
       extra: extraInfo({
         paper: "https://openreview.net/pdf?id=SObVnEp4yb9",
         id: "maniskill",
@@ -194,8 +219,8 @@ module.exports = {
       page: "",
       authors: authorList([ yang, patrick, hsu ]),
       conference: "Undergraduate thesis work; Also appeared in Advances in Cognitive Systems 2019 and DSpace@MIT",
-      visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/robochef19cover.png?raw=true",
-      visual2: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/robochef19cover.png?raw=true",
+      visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/research/robochef19cover.png?raw=true",
+      visual2: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/research/robochef19cover.png?raw=true",
       extra: extraInfo({
         paper: "https://dspace.mit.edu/handle/1721.1/119668",
         id: "robotchef",
