@@ -211,10 +211,11 @@ td {
   margin: 8px auto;
 }
 
+/*
 .conference {
-  color: #ed1b2f;
+    color: $red;
 }
-
+*/
 a:hover {
   color: #f39c12;
   cursor: pointer;
