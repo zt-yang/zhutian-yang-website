@@ -113,7 +113,7 @@ module.exports = {
       title: "Guiding Long-Horizon Task and Motion Planning with Vision Language Models",
       page: "https://zt-yang.github.io/vlm-tamp-robot",
       authors: authorList([ yang, caelan, lpk, tlp, dieter ]),
-      conference: "In Submission",
+      conference: "CoRL 2024 LangRob Workshop (Spotlight)",
       visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/research/icra25vlmtamp.gif?raw=true",
       visual2: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/research/icra25method.png?raw=true",
       extra: extraInfo({
@@ -126,7 +126,7 @@ module.exports = {
         //   "MIT News": "https://news.mit.edu/2023/ai-helps-household-robots-cut-planning-time-half-0714",
         //   "Tech Crunch": "https://techcrunch.com/2023/07/07/mit-develops-a-motion-and-task-planning-system-for-home-robots/"
         // },
-        // shoutout: "&#128293; We won Best Paper Runner-Up in CoRL 2022 Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning",
+        // shoutout: "&#128293; Accepted for Oral in CoRL 2024 LangRob Workshop",
         // poster: "https://drive.google.com/file/d/1cpzkM4o91fNaOBnwIM_-YC58Yt5vOHML/preview",
         // postersize: [800, 440], // 1500×825
         bibtex: "copyVLMTAMPToClipboard"
@@ -203,7 +203,7 @@ module.exports = {
       title: "Let’s Handle It: Generalizable Manipulation of Articulated Objects",
       page: "",
       authors: authorList([ yang, aidan ]),
-      conference: "ICRL 2022 Workshop on Generalizable Policy Learning in the Physical World",
+      conference: "ICRL 2022 Workshop on Generalizable Policy Learning in the Physical World (Spotlight)",
       visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/research/iclr22cover_cropped.jpg?raw=true",
       visual2: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/research/iclr22cover_cropped.jpg?raw=true",
       extra: extraInfo({
