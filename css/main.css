@@ -186,6 +186,7 @@ td {
   /* background-color: #3498db; */
   border-radius: 6px;
   padding: 2pt 4pt;
+  padding-top: 4pt;
   margin-right: 2pt;
   font-size: 10pt;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
