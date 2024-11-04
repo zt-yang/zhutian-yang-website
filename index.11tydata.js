@@ -127,8 +127,8 @@ module.exports = {
         //   "Tech Crunch": "https://techcrunch.com/2023/07/07/mit-develops-a-motion-and-task-planning-system-for-home-robots/"
         // },
         // shoutout: "&#128293; Accepted for Oral in CoRL 2024 LangRob Workshop",
-        // poster: "https://drive.google.com/file/d/1cpzkM4o91fNaOBnwIM_-YC58Yt5vOHML/preview",
-        // postersize: [800, 440], // 1500×825
+        poster: "https://drive.google.com/file/d/1mawmZZYIiHII_5xag9E3Va554wRQ9onB/preview",  // https://drive.google.com/file/d/1mawmZZYIiHII_5xag9E3Va554wRQ9onB/view?usp=sharing
+        postersize: [800, 991], // 46 x 57 inch
         bibtex: "copyVLMTAMPToClipboard"
       })
     },
