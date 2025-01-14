@@ -107,7 +107,7 @@ module.exports = {
   github: "https://github.com/zt-yang",
   scholar: "https://scholar.google.com/citations?user=vW5LLmUAAAAJ&hl=en",
   youtube: "https://cap.csail.mit.edu/engage/spotlights/zhutian-yang?utm_source=linkedin&utm_medium=social&utm_campaign=zhutianspot24",
-  resume: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/ztyang-CV-2024.pdf?raw=true",
+  resume: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/ztyang-CV-2025.pdf?raw=true",
   publications: [
     {
       title: "Guiding Long-Horizon Task and Motion Planning with Vision Language Models",

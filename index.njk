@@ -149,7 +149,7 @@
               <img src="https://raw.githubusercontent.com/zt-yang/zhutian-yang-website/refs/heads/main/img/zhutianyang.jpg" alt="Zhutian Yang" width="100%">
             </div>
 
-            <p>Hello! My name is Skye and I'm a PhD student in robotics at MIT. I develop algorithms for solving multi-step manipulation problems in geometrically complex environments. I use a combination of deep learning and task and motion planning (TAMP) methods. </p><p>I'm co-advised by Leslie Pack Kaelbling and Tomás Lozano-Pérez in the <a href="https://lis.csail.mit.edu/">Learning and Intelligent Systems group</a>. I'm currently a part-time research intern at <a href="https://www.tri.global/our-work/robotics">Toyota Research Institute</a> (TRI), Robotics division,  Large Behavior Models team. I was an ex-<a href="https://research.nvidia.com/labs/srl/">NVIDIA</a> intern in the Seattle Robotics Lab. I obtained bachelor's degree in information engineering and media at NTU, Singapore.</p>
+            <p>Hello! My name is Zhutian and I'm a PhD candidate in robotics at MIT. I develop algorithms for solving long-horizon mobile manipulation problems in geometrically complex environments. I use a combination of deep learning and planning methods. </p><p>I'm co-advised by Leslie Pack Kaelbling and Tomás Lozano-Pérez in the <a href="https://lis.csail.mit.edu/">Learning and Intelligent Systems group</a>. I'm currently a part-time research intern at <a href="https://www.tri.global/our-work/robotics">Toyota Research Institute</a> (TRI), Robotics division,  Large Behaviors Model team. I was an ex-<a href="https://research.nvidia.com/labs/srl/">NVIDIA</a> intern in the Seattle Robotics Lab. I obtained bachelor's degree in information engineering and media at NTU, Singapore.</p>
           </td>
 
           <td class="photo-column">
@@ -162,21 +162,20 @@
       </tbody>
     </table>
 
-
     <h2>Research</h2>
-    Robots planning long-horizon behavior, such as unpacking grocery bags and heating up the takeouts, must be able to <b>plan quickly and execute robustly</b> in <b>semantically rich, geometrically complex environments</b>. I've worked on the following problems in the field of robot learning and planning:
+    Robots exhibiting long-horizon behavior, such as unpacking grocery bags and heating up the takeouts, must be able to <b>plan quickly and execute robustly</b> in <b>semantically rich, geometrically complex environments</b>. Enabling robots to perform language-instructed, multi-step mobile manipulation tasks requires a hierarchical system of <b>planning and action foundation models</b>. Training and evaluating such models in simulation for diverse robot embodiments holds significant economic and scientific potential. However, the challenge lies in automatically generating mobile bimanual manipulation data that navigate large state spaces, continuous action spaces, multiple object contacts, and long decision horizons. To tackle these challenges, I've worked on the following problems in the field of robot learning and planning:
     <ul class="parent-list">
-      <li> <b>Developing generalizable long-horizon visuomotor policies by conbining a reactive local policy and a high-level planner (e.g., VLM or a planner).</b>
+      <li> <b>Developing generalizable long-horizon visuomotor policies by conbining an <b>X-conditioned local policy</b> (where x can be language, goal bounding box, end-effector or base poses, hidden states, etc) and a high-level <b>X-generation planning model</b> (e.g., large fine-tuned VLM).</b>
         <ul class="child-list">
-          <li> 
-            <span class="project at-mit">
-              <img src="https://github.com/zt-yang/zhutian-yang-website/blob/main/img/icon/csail-logo.png?raw=true">Ongoing at MIT</span> 
-            Develop a hierarchical policy network for multi-contact manipulation tasks by conbining multiple data sources collected in virtual and real environments.
-          </li>
           <li> 
             <span class="project at-tri">
               <img src="https://github.com/zt-yang/zhutian-yang-website/blob/main/img/icon/tri-logo.png?raw=true">Ongoing at TRI</span> 
-            Train language-conditioned multi-skill policies to solve long-horizon mobile manipulation problems and chaining them by fine-tuning vision language models for skill planning. 
+            Developed a hierarchical multi-task policy architecture where a Robot Visual Planning and Reasoning Network generates language goals and guides a low-level language-conditioned multi-skill policy. 
+          </li>
+          <li> 
+            <span class="project at-mit">
+              <img src="https://github.com/zt-yang/zhutian-yang-website/blob/main/img/icon/csail-logo.png?raw=true">Ongoing at MIT</span> 
+            Developing hierarhical humanoid manipulation policies for multi-contact whole-body manipulation tasks (e.g. box carrying or mobile insersion) by conbining diverse data sources collected in virtual and real environments.
           </li>
           <li> 
             <a class="project at-mit" href="https://yravan.github.io/plannerorderedpolicy" target="_blank">
@@ -185,7 +184,7 @@
           </li>
         </ul>
       </li>
-      <li> <b>Speeding up long-horizon task and motion planning using generative models.</b>
+      <li> <b>Generating long-horizon manipulation trajectories by combining learning-based methods and planning techniques..</b>
         <ul class="child-list">  
           <li> 
             <a class="project at-nvidia" href="https://zt-yang.github.io/vlm-tamp-robot" target="_blank"> 
