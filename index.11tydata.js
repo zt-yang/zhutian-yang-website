@@ -63,7 +63,7 @@ function extraInfo(options) {
     line += `<p style="color:#e67e22"><i><b>TLDR</b>: ${tldr}</i></p>`
   }
   if (shoutout !== "") {
-    line += `<p class="highlightable" style="color: grey"><i>${shoutout}</i></p>`
+    line += `<p style="color: grey"><i>${shoutout}</i></p>`
   }
   if (paper !== "") {
     list.push(`<a class="highlightable" href="${paper}" target="_blank">Paper</a>`)
@@ -104,6 +104,7 @@ function extraInfo(options) {
 
 module.exports = {
   name: "Zhutian (Skye) Yang",
+  pronounciation: "ju tin-yen",
   email: "ztyang {at} mit {dot} edu",
   emailme: "mailto:ztyang@mit.edu",
   twitter: "https://twitter.com/ZhutianYang_",
@@ -122,7 +123,7 @@ module.exports = {
       visual2: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/research/icra25method.png?raw=true",
       extra: extraInfo({
         paper: "http://arxiv.org/abs/2410.02193",
-        // code: "https://github.com/Learning-and-Intelligent-Systems/kitchen-worlds/tree/main",
+        code: "https://github.com/Learning-and-Intelligent-Systems/kitchen-worlds/tree/main",
         id: "vlmtamp",
         page: "https://zt-yang.github.io/vlm-tamp-robot",
         talk: "https://youtu.be/1JDua3opFuM",
