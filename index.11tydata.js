@@ -104,7 +104,7 @@ function extraInfo(options) {
 
 module.exports = {
   name: "Zhutian (Skye) Yang",
-  pronounciation: "ju tin-yen",
+  pronounciation: "ju tin-yen young",
   email: "ztyang {at} mit {dot} edu",
   emailme: "mailto:ztyang@mit.edu",
   twitter: "https://twitter.com/ZhutianYang_",
