@@ -352,3 +352,15 @@ ul {
 .hidden {
   display: none;
 }
+
+.email-separator {
+  display: inline;
+}
+
+@media screen and (max-width: 768px) {
+  .email-separator {
+    display: block;
+    height: 0.5em;
+    /* Adjust this value to control spacing between lines */
+  }
+}
