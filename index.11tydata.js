@@ -47,6 +47,7 @@ function extraInfo(options) {
   var shoutout = "shoutout" in options ? options.shoutout : "";
   var talk = "talk" in options ? options.talk : "";
   var demo = "demo" in options ? options.demo : "";
+  var tldr = "tldr" in options ? options.tldr : "";
   var code = "code" in options ? options.code : "";
   var paper = "paper" in options ? options.paper : "";
   var id = "id" in options ? options.id : "";
@@ -58,8 +59,11 @@ function extraInfo(options) {
   var media = "media" in options ? options.media : [];
   var bibtex = "bibtex" in options ? options.bibtex : "";
 
+  if (tldr !== "") {
+    line += `<p style="color:#e67e22"><i><b>TLDR</b>: ${tldr}</i></p>`
+  }
   if (shoutout !== "") {
-    line = `<p class="highlightable" style="color: grey"><i>${shoutout}</i></p>`
+    line += `<p class="highlightable" style="color: grey"><i>${shoutout}</i></p>`
   }
   if (paper !== "") {
     list.push(`<a class="highlightable" href="${paper}" target="_blank">Paper</a>`)
@@ -113,7 +117,7 @@ module.exports = {
       title: "Guiding Long-Horizon Task and Motion Planning with Vision Language Models",
       page: "https://zt-yang.github.io/vlm-tamp-robot",
       authors: authorList([ yang, caelan, lpk, tlp, dieter ]),
-      conference: "CoRL 2024 LangRob Workshop (Spotlight)",
+      conference: "CoRL 2024 LangRob Workshop (Spotlight); Submitted to ICRA 2025",
       visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/research/icra25vlmtamp.gif?raw=true",
       visual2: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/research/icra25method.png?raw=true",
       extra: extraInfo({
@@ -127,6 +131,7 @@ module.exports = {
         //   "Tech Crunch": "https://techcrunch.com/2023/07/07/mit-develops-a-motion-and-task-planning-system-for-home-robots/"
         // },
         // shoutout: "&#128293; Accepted for Oral in CoRL 2024 LangRob Workshop",
+        tldr: "Pretrained VLMs make mistakes in predicting robot actions when prompted with open language goals, so we use VLMs to break down long-horizon goals into subgoals, which are then solved by TAMP, in an interative replanning system.",
         poster: "https://drive.google.com/file/d/1mawmZZYIiHII_5xag9E3Va554wRQ9onB/preview", 
         postersize: [800, 991], // 46 x 57 inch
         bibtex: "copyVLMTAMPToClipboard"
@@ -136,7 +141,7 @@ module.exports = {
       title: "Combining Planning and Diffusion for Mobility with Unknown Dynamics",
       page: "https://yravan.github.io/plannerorderedpolicy",
       authors: authorList([ yajvan, yang, tao, lpk, tlp ]),
-      conference: "In Submission",
+      conference: "Submitted to ICRA 2025",
       visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/research/icra25popi.gif?raw=true",
       visual2: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/research/icra25popimethod.png?raw=true",
       extra: extraInfo({
@@ -152,6 +157,7 @@ module.exports = {
         // shoutout: "&#128293; We won Best Paper Runner-Up in CoRL 2022 Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning",
         // poster: "https://drive.google.com/file/d/1cpzkM4o91fNaOBnwIM_-YC58Yt5vOHML/preview",
         // postersize: [800, 440], // 1500×825
+        // tldr: "Behabior cloning policies.",
         bibtex: "copyPopiToClipboard"
       })
     },
