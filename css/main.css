@@ -61,7 +61,7 @@ h3 {
   }
 
   .hover-img {
-    display: none !important;
+    /* display: none !important; */
   }
 }
 table {
