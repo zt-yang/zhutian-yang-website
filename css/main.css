@@ -364,3 +364,9 @@ ul {
     /* Adjust this value to control spacing between lines */
   }
 }
+.news-block {
+  background-color: #3498db22;
+  border-radius: 6px;
+  padding: 10px;
+  padding-bottom: 2pt;
+}
