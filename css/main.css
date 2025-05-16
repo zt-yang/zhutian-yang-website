@@ -73,7 +73,7 @@ table {
 }
 
 .name {
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.5rem;
 }
 
 .center {
@@ -122,7 +122,7 @@ td {
 }
 */
 .photo-column {
-  margin-top: 90px;
+  margin-top: 95px;
   display: block;
   padding-left: 2.5%;
 }
