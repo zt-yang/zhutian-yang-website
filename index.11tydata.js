@@ -26,19 +26,22 @@ const tao = "Tao Chen"
 
 // authorList generates the HTML for the author list from a JS array
 function authorList(authors) {
-  var list = [];
-  authors.forEach((name, i) => {
-    if (name == yang) {
-      name = '<span class="self-author">' + name + "</span>";
+  const list = authors.map((name, i) => {
+    // Highlight yourself
+    if (name === yang) {
+      name = `<span class="self-author">${name}</span>`;
     }
-    if (i == authors.length - 1) {
-      list.push("and " + name);
-    } else {
-      list.push(name);
+
+    // Add “and ” only when there are ≥2 authors *and* we’re on the last one
+    if (authors.length > 1 && i === authors.length - 1) {
+      return `and ${name}`;
     }
+    return name;
   });
+
   return list.join(", ");
 }
+
 
 // sometimes there are paper links, project pages, talk videos, and news
 function extraInfo(options) {
@@ -118,9 +121,11 @@ module.exports = {
   publications: [
     {
       title: "(PhD Thesis) Learning to Solve Long-Horizon Manipulation Problems",
-      authors: authorList([ yang]),
+      page: "https://drive.google.com/file/d/1C3IroMEMOVUbv3E8aXQFWkolWh6GTxAr/preview",
+      authors: authorList([yang]),
       conference: "Thesis Committee: Leslie Pack Kaelbling, Tomás Lozano-Pérez, Caelan Reed Garrett, Danfei Xu",
       visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/research/phd.jpg?raw=true",
+      visual2: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/research/phd.jpg?raw=true",
       extra: extraInfo({
         paper: "https://drive.google.com/file/d/1C3IroMEMOVUbv3E8aXQFWkolWh6GTxAr/preview",
         id: "thesis",
