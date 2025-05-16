@@ -105,8 +105,10 @@ function extraInfo(options) {
 module.exports = {
   name: "Zhutian (Skye) Yang",
   pronounciation: "ju tin-yen young",
-  email: "ztyang {at} mit {dot} edu",
-  emailme: "mailto:ztyang@mit.edu",
+  // email: "ztyang {at} mit {dot} edu",
+  // emailme: "mailto:ztyang@mit.edu",
+  email: "oxskye {at} gmail {dot} com",
+  emailme: "mailto:oxskye@gmail.com",
   twitter: "https://twitter.com/ZhutianYang_",
   linkedin: "https://www.linkedin.com/in/zhutian-yang/",
   github: "https://github.com/zt-yang",
@@ -114,6 +116,17 @@ module.exports = {
   youtube: "https://cap.csail.mit.edu/engage/spotlights/zhutian-yang?utm_source=linkedin&utm_medium=social&utm_campaign=zhutianspot24",
   resume: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/ztyang-CV-2025.pdf?raw=true",
   publications: [
+    {
+      title: "(PhD Thesis) Learning to Solve Long-Horizon Manipulation Problems",
+      authors: authorList([ yang]),
+      conference: "Thesis Committee: Leslie Pack Kaelbling, Tomás Lozano-Pérez, Caelan Reed Garrett, Danfei Xu",
+      visual: "https://github.com/zt-yang/zhutian-yang-website/blob/main/img/research/phd.jpg?raw=true",
+      extra: extraInfo({
+        paper: "https://drive.google.com/file/d/1C3IroMEMOVUbv3E8aXQFWkolWh6GTxAr/preview",
+        id: "thesis",
+        talk: "https://www.youtube.com/watch?v=w43wHR3Kr4o&ab_channel=ZhutianYang",
+      })
+    },
     {
       title: "Guiding Long-Horizon Task and Motion Planning with Vision Language Models",
       page: "https://zt-yang.github.io/vlm-tamp-robot",
