@@ -198,8 +198,8 @@ module.exports = {
         media: {
           "MIT News": "https://news.mit.edu/2023/new-technique-helps-robots-pack-objects-tight-space-1017",
         },
-        poster: "https://drive.google.com/file/d/1uKmcsuBO0D5o5QrXBCKQfx4cPTTJ8mGv/preview",
-        postersize: [800, 600], // 2880x2160
+        // poster: "https://drive.google.com/file/d/1uKmcsuBO0D5o5QrXBCKQfx4cPTTJ8mGv/preview",
+        // postersize: [800, 600], // 2880x2160
         tldr: "Multi-step manipulation problems involve a lot of collision-free, physical stability, and culture-defined spatial constraints. Conventional methods usually solve it by sampling then rejection, which is too slow. Therefore, we find global solutions by diffusion-based optimization, using diffusion models trained for each contraint type.",
       })
     },
