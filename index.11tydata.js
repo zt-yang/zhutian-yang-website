@@ -144,7 +144,7 @@ module.exports = {
         code: "https://github.com/Learning-and-Intelligent-Systems/kitchen-worlds/tree/main",
         id: "vlmtamp",
         page: "https://zt-yang.github.io/vlm-tamp-robot",
-        talk: "https://youtu.be/1JDua3opFuM",]
+        talk: "https://youtu.be/1JDua3opFuM",
         // poster: "https://drive.google.com/file/d/1mawmZZYIiHII_5xag9E3Va554wRQ9onB/preview", 
         // postersize: [800, 991], // 46 x 57 inch
         bibtex: "copyVLMTAMPToClipboard",
@@ -164,7 +164,7 @@ module.exports = {
         id: "popi",
         page: "https://yravan.github.io/plannerorderedpolicy",
         bibtex: "copyPopiToClipboard",
-        tldr: "Rearranging large objects with unprediatble dynamics is hard because the relative pose between robot and object is changing. Diffusion policies that output global robot configurations struggle to generalize to new initial and goal conditions, or new environments and objects. So, we use motion planning to generating waypoints that guide a local diffusion policy, which is trained to achieve relative movements of the chair."
+        tldr: "Rearranging large objects with unprediatble dynamics is hard because the relative pose between robot and object is changing. Diffusion policies that output global robot configurations struggle to generalize to new initial and goal conditions, or new environments and objects. So, we use motion planning to generating waypoints that guide a local diffusion policy, which is trained to achieve relative movements of the chair.",
       })
     },
     {
