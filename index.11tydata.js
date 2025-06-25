@@ -144,14 +144,9 @@ module.exports = {
         code: "https://github.com/Learning-and-Intelligent-Systems/kitchen-worlds/tree/main",
         id: "vlmtamp",
         page: "https://zt-yang.github.io/vlm-tamp-robot",
-        talk: "https://youtu.be/1JDua3opFuM",
-        // media: {
-        //   "MIT News": "https://news.mit.edu/2023/ai-helps-household-robots-cut-planning-time-half-0714",
-        //   "Tech Crunch": "https://techcrunch.com/2023/07/07/mit-develops-a-motion-and-task-planning-system-for-home-robots/"
-        // },
-        // shoutout: "&#128293; Accepted for Oral in CoRL 2024 LangRob Workshop",
-        poster: "https://drive.google.com/file/d/1mawmZZYIiHII_5xag9E3Va554wRQ9onB/preview", 
-        postersize: [800, 991], // 46 x 57 inch
+        talk: "https://youtu.be/1JDua3opFuM",]
+        // poster: "https://drive.google.com/file/d/1mawmZZYIiHII_5xag9E3Va554wRQ9onB/preview", 
+        // postersize: [800, 991], // 46 x 57 inch
         bibtex: "copyVLMTAMPToClipboard",
         tldr: "Pretrained VLMs make mistakes in predicting robot actions when prompted with open language goals, so we use VLMs to break down long-horizon goals into subgoals, which are then solved by TAMP, in an interative replanning system. It's used to solve problems that involve interactions with 20+ objects and require 30-50 actions to complete.",
       })
@@ -168,15 +163,6 @@ module.exports = {
         // code: "https://github.com/Learning-and-Intelligent-Systems/kitchen-worlds/tree/main",
         id: "popi",
         page: "https://yravan.github.io/plannerorderedpolicy",
-        // talk: "https://youtu.be/1JDua3opFuM",
-        // media: {
-        //   "MIT News": "https://news.mit.edu/2023/ai-helps-household-robots-cut-planning-time-half-0714",
-        //   "Tech Crunch": "https://techcrunch.com/2023/07/07/mit-develops-a-motion-and-task-planning-system-for-home-robots/"
-        // },
-        // shoutout: "&#128293; We won Best Paper Runner-Up in CoRL 2022 Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning",
-        // poster: "https://drive.google.com/file/d/1cpzkM4o91fNaOBnwIM_-YC58Yt5vOHML/preview",
-        // postersize: [800, 440], // 1500×825
-        // tldr: "Behabior cloning policies.",
         bibtex: "copyPopiToClipboard",
         tldr: "Rearranging large objects with unprediatble dynamics is hard because the relative pose between robot and object is changing. Diffusion policies that output global robot configurations struggle to generalize to new initial and goal conditions, or new environments and objects. So, we use motion planning to generating waypoints that guide a local diffusion policy, which is trained to achieve relative movements of the chair."
       })
@@ -221,8 +207,8 @@ module.exports = {
           "Tech Crunch": "https://techcrunch.com/2023/07/07/mit-develops-a-motion-and-task-planning-system-for-home-robots/"
         },
         shoutout: "&#128293; We won Best Paper Runner-Up in CoRL 2022 Workshop on Learning, Perception, and Abstraction for Long-Horizon Planning",
-        poster: "https://drive.google.com/file/d/1cpzkM4o91fNaOBnwIM_-YC58Yt5vOHML/preview",
-        postersize: [800, 440], // 1500×825
+        // poster: "https://drive.google.com/file/d/1cpzkM4o91fNaOBnwIM_-YC58Yt5vOHML/preview",
+        // postersize: [800, 440], // 1500×825
         bibtex: "copyPiginetToClipboard",
         tldr: "In long-horizon mobile manipulation problems in complex environments with lots of articulated and movable obstacles, task and motion planners spend most computation on solving motion planning problems that aren't solvable. So we train a plan feasibility prediction model that quickly sort candidate plans by their likelihood of success using visual and language features of the problem, which cuts down planning time by 50 - 80 %.",
       })
@@ -237,8 +223,8 @@ module.exports = {
       extra: extraInfo({
         paper: "https://openreview.net/pdf?id=SObVnEp4yb9",
         id: "maniskill",
-        poster: "https://drive.google.com/file/d/1arsOQ_e9Ydt12QbYNd6uIswdKFz-fcHP/preview",
-        postersize: [800, 534], // 2592×1728
+        // poster: "https://drive.google.com/file/d/1arsOQ_e9Ydt12QbYNd6uIswdKFz-fcHP/preview",
+        // postersize: [800, 534], // 2592×1728
         shoutout: "&#128293; We won 2nd place in the ManiSkill Challenge 2022 Robotics Track"
       }),
     },
@@ -253,8 +239,8 @@ module.exports = {
         paper: "https://dspace.mit.edu/handle/1721.1/119668",
         id: "robotchef",
         demo: "https://youtu.be/oGgHGs0lKPU",
-        poster: "https://drive.google.com/file/d/1FMIQsfJN5r8Rkqw435AHijorCHgjXDkq/preview",
-        postersize: [800, 534], 
+        // poster: "https://drive.google.com/file/d/1FMIQsfJN5r8Rkqw435AHijorCHgjXDkq/preview",
+        // postersize: [800, 534], 
       }),
     },
   ],
